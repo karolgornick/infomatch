@@ -6,13 +6,14 @@
  * @flow strict-local
  */
 
-import React, { Component } from 'react';
+import React, {Component, useEffect, useState} from 'react';
 // import type {Node} from 'react';
 import {
       Button,
       Text,
       View,
     FlatList,
+    Image,
     StyleSheet,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -20,7 +21,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 const Tab = createMaterialTopTabNavigator();
+import {SvgFromUri} from "react-native-svg";
 
+import {
+    getCountries
+} from "./api/FootballAPI";
+
+import {
+    test
+} from "./api/test";
 
 
 const Stack = createNativeStackNavigator();
@@ -73,45 +82,107 @@ const Stack = createNativeStackNavigator();
 //   );
 // };
 
-const FlatListBasics = () => {
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            paddingTop: 22,
-        },
-        item: {
-            padding: 10,
-            fontSize: 18,
-            height: 44,
-            borderBottomWidth: 1,
-            width: '100%',
-        },
-        list: {
-            margin: 0,
-            padding: 0,
-            width: '100%'
+
+// class Country extends React.Component {
+//     render () {
+//         return (
+//             <Text>dfsafds</Text>
+//             <Text>fdsfdsf</Text>
+//         )
+//     }
+// }
+
+class FlatListBasicsTwo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            countries: null
+        };
+    }
+
+    async componentDidMount() {
+        const fetchCountries = async () => {
+            return await getCountries()
         }
-    });
-    return (
-        <View style={styles.container}>
-            <FlatList
-                style={styles.list}
-                data={[
-                    {key: 'Devin'},
-                    {key: 'Dan'},
-                    {key: 'Dominic'},
-                    {key: 'Jackson'},
-                    {key: 'James'},
-                    {key: 'Joel'},
-                    {key: 'John'},
-                    {key: 'Jillian'},
-                    {key: 'Jimmy'},
-                    {key: 'Julie'},
-                ]}
-                renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-            />
-        </View>
-    );
+        const response = await fetchCountries()
+        this.setState(() => {
+            return {
+                countries: response.response.slice(0, 10)
+            }
+        })
+    }
+
+    render() {
+        const styles = StyleSheet.create({
+            container: {
+                display: "flex",
+                justifyContent: "flex-start",
+                width: "100%",
+                height: "100%",
+                alignItems: "flex-start",
+                paddingHorizontal: 20,
+                paddingVertical: 10,
+                // flex: 1,
+                // paddingTop: 22,
+                // position: "relative",
+                // width: "100%",
+                // padding: "10px"
+            },
+            item: {
+                display: "flex",
+                flexDirection: "row",
+                paddingVertical: 5,
+                borderBottomWidth: 1,
+                width: "100%"
+                // padding: 10,
+                // fontSize: 18,
+                // height: 44,
+                // borderBottomWidth: 1,
+                // width: '100%',
+            },
+            list: {
+                width: "100%",
+                // position: "absolute",
+                // left: 0,
+                // marginLeft: 0,
+                // margin: 0,
+                // padding: 0,
+                // width: '100%'
+            },
+            flag: {
+                height: 30,
+                width: 30,
+                marginRight: 10
+            }
+        });
+        return (
+            <View style={styles.container}>
+                {this.state.countries &&
+                    <Text>dsadsa</Text>
+                }
+                {this.state.countries &&
+                    <FlatList
+                        style={styles.list}
+                        data={this.state.countries}
+                        renderItem={({ item }) => (
+                            // return a component using that data
+                            <View
+                                style={styles.item}
+                            >
+                                <SvgFromUri
+                                    width="20px"
+                                    height="20px"
+                                    uri={item.flag}
+                                    style={styles.flag}
+                                />
+                                <Text>{item.name}</Text>
+                            </View>
+                        )}
+                    />
+                }
+            </View>
+        );
+    }
 }
 
 function MatchesScreen({ navigation }) {
@@ -129,7 +200,9 @@ function MatchesScreen({ navigation }) {
 function LeaguesScreen() {
   return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <FlatListBasics></FlatListBasics>
+          <React.StrictMode>
+            <FlatListBasicsTwo></FlatListBasicsTwo>
+          </React.StrictMode>
       </View>
   );
 }
@@ -161,19 +234,6 @@ function TopBar() {
 function TopBarNavigation() {
     return (
         <NavigationContainer>
-            {/*<TopBar></TopBar>*/}
-            {/*<Stack.Navigator>*/}
-            {/*  <Stack.Screen*/}
-            {/*      name="Matches"*/}
-            {/*      component={MatchesScreen}*/}
-            {/*      options={{ title: 'Mecze', }}*/}
-            {/*  />*/}
-            {/*  <Stack.Screen*/}
-            {/*      name="Leagues"*/}
-            {/*      component={LeaguesScreen}*/}
-            {/*      options={{ title: 'Ligi' }}*/}
-            {/*  />*/}
-            {/*</Stack.Navigator>*/}
             <Tab.Navigator>
                 <Tab.Screen name="Ligi" component={LeaguesScreen} />
                 <Tab.Screen name="Mecze" component={MatchesScreen} />
@@ -188,9 +248,10 @@ export default class App extends Component {
   // }
   render() {
     return (
-        <React.StrictMode>
-            <TopBarNavigation></TopBarNavigation>
-        </React.StrictMode>
+        <TopBarNavigation></TopBarNavigation>
+        // <React.StrictMode>
+        //     <TopBarNavigation></TopBarNavigation>
+        // </React.StrictMode>
     );
   }
 }
