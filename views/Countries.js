@@ -73,25 +73,29 @@ export class CountriesList extends React.Component {
 
 
         return (
-            <View style={styles.container}>
+            <View
+                style={styles.container}
+                key="List"
+            >
                 {this.state.countries &&
                     <List.Section
                         style={{
-                            width: '100%'
+                            width: '100%',
                         }}
+                        key="ListSection"
                     >
                         {this.state.countries.map((country) => {
                             return (
                                 <List.Accordion
+                                    key={country.name}
                                     style={{
                                         backgroundColor: 'white',
                                     }}
                                     title={country.name}>
                                     <Country
-                                        data={country.code}
+                                        code={country.code}
                                     />
                                 </List.Accordion>
-                                // <List.Item title={country.name} />
                             );
                         })}
 
