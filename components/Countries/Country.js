@@ -33,42 +33,42 @@ export class Country extends React.Component {
     render() {
         return(
             <View key="Ligawloska">
-                {this.state.leagues &&
-                    this.state.leagues.map((country, i) => {
-                        return (
-                            <View
-                                key={country.league.name}
-                                style={{
-                                    display: "flex",
-                                    flexDirection: "row",
-                                    paddingHorizontal: 30,
-                                    width: "100%",
-                                    alignItems: "center",
-                                    paddingTop: (i === 0) ? 10 : 0,
-                                    paddingBottom: 10,
-                                }}
-                            >
-                                <Image
-                                    style={{
-                                        width: 40,
-                                        height: 40,
-                                    }}
-                                    source={{
-                                        uri: country.league.logo
-                                    }}
-                                />
-                                <Text
-                                    style={{
-                                        marginLeft: 20,
-                                        fontSize: 14
-                                    }}
-                                >
-                                    {country.league.name}
-                                </Text>
-                            </View>
-                        )
-                    })
-                }
+                {/*{this.state.leagues &&*/}
+                {/*    this.state.leagues.map((country, i) => {*/}
+                {/*        return (*/}
+                {/*            <View*/}
+                {/*                key={country.league.name}*/}
+                {/*                style={{*/}
+                {/*                    display: "flex",*/}
+                {/*                    flexDirection: "row",*/}
+                {/*                    paddingHorizontal: 30,*/}
+                {/*                    width: "100%",*/}
+                {/*                    alignItems: "center",*/}
+                {/*                    paddingTop: (i === 0) ? 10 : 0,*/}
+                {/*                    paddingBottom: 10,*/}
+                {/*                }}*/}
+                {/*            >*/}
+                {/*                <Image*/}
+                {/*                    style={{*/}
+                {/*                        width: 40,*/}
+                {/*                        height: 40,*/}
+                {/*                    }}*/}
+                {/*                    source={{*/}
+                {/*                        uri: country.league.logo*/}
+                {/*                    }}*/}
+                {/*                />*/}
+                {/*                <Text*/}
+                {/*                    style={{*/}
+                {/*                        marginLeft: 20,*/}
+                {/*                        fontSize: 14*/}
+                {/*                    }}*/}
+                {/*                >*/}
+                {/*                    {country.league.name}*/}
+                {/*                </Text>*/}
+                {/*            </View>*/}
+                {/*        )*/}
+                {/*    })*/}
+                {/*}*/}
             </View>
         )
     }

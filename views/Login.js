@@ -3,7 +3,7 @@ import {
     View,
     Text,
     TextInput,
-    Button,
+    Pressable,
 } from "react-native";
 
 export class Login extends React.Component {
@@ -18,12 +18,12 @@ export class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleLoginChange(event) {
-        this.setState({login: event.target.value});
+    handleLoginChange(login) {
+        this.setState({login});
     }
 
-    handlePasswordChange(event) {
-        this.setState({password: event.target.value});
+    handlePasswordChange(password) {
+        this.setState({password});
     }
 
     handleSubmit(event) {
@@ -53,8 +53,18 @@ export class Login extends React.Component {
                 paddingHorizontal: 10,
                 paddingVertical: 5,
             },
-            button: {
+            buttonContainer: {
                 marginTop: 10,
+                display: "flex",
+                justifyContent: "center"
+            },
+            button: {
+                backgroundColor: "grey",
+                paddingHorizontal: 10,
+                paddingVertical: 10,
+                display: "flex",
+                alignItems: 'center',
+                justifyContent: 'center',
             }
         }
 
@@ -87,7 +97,7 @@ export class Login extends React.Component {
                     <TextInput
                         style={styles.input}
                         value={this.state.login}
-                        onChange={this.handleLoginChange}
+                        onChangeText={newText => this.handleLoginChange(newText)}
                     />
                 </View>
 
@@ -102,17 +112,23 @@ export class Login extends React.Component {
                     <TextInput
                         style={styles.input}
                         value={this.state.password}
-                        onChange={this.handlePasswordChange}
+                        onChangeText={newText => this.handlePasswordChange(newText)}
                         secureTextEntry={true}
                     />
                 </View>
 
-                <Button
-                    style={styles.button}
-                    onPress={this.handleSubmit}
-                    title="Zaloguj się"
-                    accessibilityLabel="Learn more about this purple button"
-                />
+                <View
+                    style={styles.buttonContainer}
+                >
+                    <Pressable
+                        style={styles.button}
+                        onPress={this.handleSubmit}
+                    >
+                        <Text>
+                            Zaloguj się
+                        </Text>
+                    </Pressable>
+                </View>
             </View>
         )
     }
