@@ -7,6 +7,7 @@ import {
     Country
 } from "../components/Countries/Country";
 
+
 export class CountriesList extends React.Component {
     constructor(props) {
         super(props);
@@ -105,23 +106,3 @@ export class CountriesList extends React.Component {
         );
     }
 }
-
-
-// <FlatList
-//     style={styles.list}
-//     data={this.state.countries}
-//     renderItem={({ item }) => (
-//         // return a component using that data
-//         <View
-//             style={styles.item}
-//         >
-//             <SvgFromUri
-//                 width="20px"
-//                 height="20px"
-//                 uri={item.flag}
-//                 style={styles.flag}
-//             />
-//             <Text>{item.name}</Text>
-//         </View>
-//     )}
-// />
