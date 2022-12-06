@@ -7,8 +7,22 @@ import {
 export class Settings extends React.Component {
     render() {
         return (
-            <View>
-                <Text>ustawienia</Text>
+            <View
+                style={{
+                    padding: 20,
+                    backgroundColor: '#fff',
+                    marginTop: 20,
+                }}
+            >
+                <Text
+                    style={{
+                        fontSize: 16,
+                        textAlign: "center",
+                        fontWeight: "500",
+                    }}
+                >
+                    Ustawienia
+                </Text>
             </View>
         )
     }
