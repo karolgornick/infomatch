@@ -5,8 +5,9 @@ import {
     TextInput,
     Pressable,
 } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
-export class Login extends React.Component {
+export class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -41,7 +42,7 @@ export class Login extends React.Component {
                 marginTop: 10,
             },
             label: {
-                width: 50,
+                width: 70,
                 textAlign: "right",
                 paddingRight: 10,
             },
@@ -88,7 +89,7 @@ export class Login extends React.Component {
                         fontWeight: "500",
                     }}
                 >
-                    Logowanie
+                    Rejestracja
                 </Text>
 
                 <View
@@ -112,7 +113,37 @@ export class Login extends React.Component {
                     <Text
                         style={styles.label}
                     >
+                        Login
+                    </Text>
+                    <TextInput
+                        style={styles.input}
+                        value={this.state.login}
+                        onChangeText={newText => this.handleLoginChange(newText)}
+                    />
+                </View>
+
+                <View
+                    style={styles.container}
+                >
+                    <Text
+                        style={styles.label}
+                    >
                         Hasło
+                    </Text>
+                    <TextInput
+                        style={styles.input}
+                        value={this.state.password}
+                        onChangeText={newText => this.handlePasswordChange(newText)}
+                        secureTextEntry={true}
+                    />
+                </View>
+                <View
+                    style={styles.container}
+                >
+                    <Text
+                        style={styles.label}
+                    >
+                        Powtórz hasło
                     </Text>
                     <TextInput
                         style={styles.input}
@@ -130,20 +161,21 @@ export class Login extends React.Component {
                         onPress={this.handleSubmit}
                     >
                         <Text>
-                            Zaloguj się
+                            Zarejestruj się
                         </Text>
                     </Pressable>
                 </View>
                 <Text
                     style={styles.footerText}
                 >
-                    Nie masz konta?
+                    Masz konto?
                 </Text>
                 <Pressable
                     style={styles.button}
+                    onPress={() => navigation.navigate('Register')}
                 >
                     <Text>
-                        Przejdź do rejestracji
+                        Przejdź do logowania
                     </Text>
                 </Pressable>
             </View>
