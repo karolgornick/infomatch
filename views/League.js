@@ -16,6 +16,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Table, Row } from 'react-native-table-component';
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
 import leagueData from "../api/en/table.json";
+import matchesData from "../api/en/matches.json";
 const Tab = createMaterialTopTabNavigator();
 
 export const League = () => {
@@ -134,8 +135,65 @@ function LeagueMatches () {
 }
 
 function LeagueScorers () {
+    const [data, setData] = useState([]);
+
+    const getData = () => {
+        const scorersData = require('../api/en/scorers.json');
+        setData({
+            scorers: scorersData.response.slice(0, 15)
+        })
+    }
+    useEffect(()=>{
+        getData()
+    },[])
     return (
-        <Text>strzelcy</Text>
+        <SafeAreaView>
+            <ScrollView style={{
+                backgroundColor: '#fff',
+                padding: 20,
+                marginTop: 10,
+            }}>
+                <View
+                    style={{
+                        borderBottomWidth: 1,
+                        borderRightWidth: 1,
+                    }}
+                >
+                    { data && data.scorers &&
+                        data.scorers.map((data, key) => {
+                            return (
+                                <View
+                                    key={`scorer-${key}`}
+                                >
+                                    <View
+                                        style={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "space-between",
+                                            borderLeftWidth: 1,
+                                            borderTopWidth: 1,
+                                            paddingVertical: 5,
+                                            paddingHorizontal: 5,
+                                        }}
+                                    >
+                                        <Text
+                                            style={{
+                                                flexGrow: 1
+                                            }}
+                                        >
+                                            {data.player.firstname} {data.player.lastname}
+                                        </Text>
+                                        <Text>
+                                            {data.statistics[0].goals.total}
+                                        </Text>
+                                    </View>
+                                </View>
+                            )
+                        })
+                    }
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
