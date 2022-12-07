@@ -34,7 +34,7 @@ function LeagueMatches () {
     const [data, setData] = useState([]);
 
     const getData = () => {
-        const matchesData = require('../api/en/matches.json.json');
+        const matchesData = require('../api/en/matches.json');
         setData({
             matches: matchesData.response.slice(0, 30)
         })
@@ -43,61 +43,93 @@ function LeagueMatches () {
         getData()
     },[])
     return (
-        <View style={{
-            backgroundColor: '#fff',
-            padding: 20,
-            marginTop: 10,
-        }}>
-            <Pressable onPress={() => navigation.navigate('Mecz')}>
-                <View>
-                    <View style={{
-                        display: "flex",
-                        flexDirection: "row"
-                    }}>
-                        <View
-                            style={{
-                                borderWidth: 1,
-                                paddingVertical: 2,
-                                paddingHorizontal: 5,
-                            }}
-                        >
-                            <Text>
-                                04.11.22
-                            </Text>
-                            <Text style={{textAlign: "center"}}>
-                                18:00
-                            </Text>
-                        </View>
-                        <View
-                            style={{
-                                borderWidth: 1,
-                                flexGrow: 1,
-                                paddingVertical: 2,
-                                paddingHorizontal: 5,
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "center"
-                            }}
-                        >
-                            <Text
-                                style={{
-                                    textAlign: "center"
-                                }}
-                            >
-                                Stal Mielec
-                            </Text>
-                            <Text
-                                style={{
-                                    textAlign: "center"
-                                }}
-                            >
-                                Zagłębie Lublin
-                            </Text>
-                        </View>
+        <SafeAreaView>
+            <ScrollView style={{
+                backgroundColor: '#fff',
+                padding: 20,
+                marginTop: 10,
+            }}>
+                <Pressable onPress={() => navigation.navigate('Mecz')}>
+                    <View>
+                        { data && data.matches &&
+                            data.matches.map((data, key) => {
+                                let homeColor = null, awayColor = null
+                                if (data.teams.home.winner === false && data.teams.away.winner === true) {
+                                    homeColor = 'red'
+                                } else if (data.teams.home.winner === true && data.teams.away.winner === false) {
+                                    homeColor = 'green'
+                                }
+                                if (data.teams.away.winner === false && data.teams.home.winner === true) {
+                                    awayColor = 'red'
+                                } else if (data.teams.away.winner === true && data.teams.home.winner === false) {
+                                    awayColor = 'green'
+                                }
+                                return (
+                                    <View
+                                        key={`match-${key}`}
+                                        style={{
+                                            display: "flex",
+                                            flexDirection: "row"
+                                        }}
+                                    >
+                                        <View
+                                            style={{
+                                                borderWidth: 1,
+                                                paddingVertical: 2,
+                                                paddingHorizontal: 5,
+                                            }}
+                                        >
+                                            <Text>
+                                                {new Date(data.fixture.date).toLocaleDateString("pl")}
+                                            </Text>
+                                            <Text style={{textAlign: "center"}}>
+                                                {new Date(data.fixture.date).toLocaleTimeString("pl", {
+                                                    minute: "numeric",
+                                                    hour: "numeric"
+                                                })}
+                                            </Text>
+                                        </View>
+                                        <View
+                                            style={{
+                                                borderWidth: 1,
+                                                flexGrow: 1,
+                                                paddingVertical: 2,
+                                                paddingHorizontal: 5,
+                                                display: "flex",
+                                                flexDirection: "column",
+                                                justifyContent: "center"
+                                            }}
+                                        >
+                                            <Text
+                                                style={{
+                                                    textAlign: "center",
+                                                    color: homeColor
+                                                }}
+                                            >
+                                                {data.teams.home.name}
+                                            </Text>
+                                            <Text
+                                                style={{
+                                                    textAlign: "center",
+                                                    color: awayColor
+                                                }}
+                                            >
+                                                {data.teams.away.name}
+                                            </Text>
+                                        </View>
+                                        <View>
+                                            <Text>
+                                                {data.goals.home}:{data.goals.away}
+                                            </Text>
+                                        </View>
+                                    </View>
+                                )
+                            })
+                        }
                     </View>
-                </View>
-            </Pressable>
-        </View>
+                </Pressable>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
@@ -327,33 +359,6 @@ function LeagueTable () {
                         })
                     }
                 </View>
-
-                <Text>stds</Text>
-
-                {/*<Table*/}
-                {/*    borderStyle={{*/}
-                {/*        borderWidth: 1*/}
-                {/*    }}*/}
-                {/*>*/}
-                {/*    /!*<Row*!/*/}
-                {/*    /!*    textStyle={{*!/*/}
-                {/*    /!*        color: 'red'*!/*/}
-                {/*    /!*    }}*!/*/}
-                {/*    /!*    data={['#', 'Zespół', 'P', 'DIFF', 'PTS']}*!/*/}
-                {/*    /!*></Row>*!/*/}
-                {/*    /!*<Row*!/*/}
-                {/*    /!*    textStyle={{*!/*/}
-                {/*    /!*        color: 'red'*!/*/}
-                {/*    /!*    }}*!/*/}
-                {/*    /!*    data={['1.', 'Zespół 1', '13', '+14', '29']}*!/*/}
-                {/*    /!*></Row>*!/*/}
-                {/*    /!*<Row*!/*/}
-                {/*    /!*    textStyle={{*!/*/}
-                {/*    /!*        color: 'red'*!/*/}
-                {/*    /!*    }}*!/*/}
-                {/*    /!*    data={['2.', 'Zespół 2', '13', '+14', '29']}*!/*/}
-                {/*    /!*></Row>*!/*/}
-                {/*</Table>*/}
             </ScrollView>
         </SafeAreaView>
     )
