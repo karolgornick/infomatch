@@ -15,20 +15,52 @@ import { useNavigation } from '@react-navigation/native';
 //
 // const navigation = createNativeStackNavigator();
 
-export const Country = ({item}) => {
-    console.log(item)
+export const Country = () => {
     const navigation = useNavigation();
     return (
         <Pressable onPress={() => navigation.navigate('Liga')}>
-            <Text
+            <View
                 style={{
-                    textAlign: 'left',
-                    color: 'white',
-                    fontSize: 24,
-                    fontFamily: 'Montserrat_100Thin_Italic',
-                }}>
-                dsadsad
-            </Text>
+                    display: "flex",
+                    flexDirection: "row",
+                    paddingHorizontal: 30,
+                    width: "100%",
+                    alignItems: "center",
+                    // paddingTop: (i === 0) ? 10 : 0,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                }}
+            >
+                <Text
+                    style={{
+                        marginLeft: 20,
+                        fontSize: 14
+                    }}
+                >
+                    Liga 1
+                </Text>
+            </View>
+            <View
+                style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    paddingHorizontal: 30,
+                    width: "100%",
+                    alignItems: "center",
+                    // paddingTop: (i === 0) ? 10 : 0,
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                }}
+            >
+                <Text
+                    style={{
+                        marginLeft: 20,
+                        fontSize: 14
+                    }}
+                >
+                    Liga 2
+                </Text>
+            </View>
         </Pressable>
     );
 };
@@ -46,12 +78,17 @@ export const Country = ({item}) => {
 //     );
 // }
 
+
+
+
+
 // export class Country extends React.Component {
 //
 //     constructor(props) {
 //         super(props);
 //         this.state = {
-//             leagues: null
+//             leagues: null,
+//             navigator: null
 //         };
 //     }
 //
@@ -60,16 +97,13 @@ export const Country = ({item}) => {
 //             return await getCountryLeague(this.props.code)
 //         }
 //         const response = await fetchLeagues()
+//         // const navigation = await useNavigation();
+//
 //         this.setState(() => {
 //             return {
 //                 leagues: response.response
 //             }
 //         })
-//     }
-//
-//     redirectToLeague() {
-//         console.log('jaaa')
-//         console.log(navigation)
 //     }
 //
 //     render() {
@@ -91,7 +125,7 @@ export const Country = ({item}) => {
 //                                         paddingTop: (i === 0) ? 10 : 0,
 //                                         paddingBottom: 10,
 //                                     }}
-//                                     onPress={this.redirectToLeague}
+//                                     onPress={() => this.props.navigation.navigate('Liga')}
 //                                 >
 //                                     <Image
 //                                         style={{

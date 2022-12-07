@@ -3,8 +3,8 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { createStackNavigator } from '@react-navigation/stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
-    LeagueTable
-} from "../views/LeagueTable";
+    League
+} from "../views/League";
 
 
 import {Button, Text, View} from "react-native";
@@ -29,8 +29,7 @@ function MatchesScreen({ navigation }) {
     );
 }
 
-function LeaguesScreen({ navigator }) {
-    console.log(navigator)
+function LeaguesScreen() {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <CountriesList></CountriesList>
@@ -49,7 +48,7 @@ function LeaguesNavigator() {
             />
             <Stack.Screen
                 name="Liga"
-                component={LeagueTable}
+                component={League}
                 options={{ headerShown: false }}
             />
         </Stack.Navigator>
