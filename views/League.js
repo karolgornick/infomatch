@@ -6,7 +6,7 @@ import {
     TextInput,
     Pressable,
     ScrollView,
-    SafeAreaView,
+    SafeAreaView, Image,
 } from "react-native";
 
 import axios from "axios";
@@ -15,8 +15,7 @@ import { useNavigation } from '@react-navigation/native';
 // import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import { Table, Row } from 'react-native-table-component';
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
-import leagueData from "../api/en/table.json";
-import matchesData from "../api/en/matches.json";
+import scorersData from "../api/en/scorers.json";
 const Tab = createMaterialTopTabNavigator();
 
 export const League = () => {
@@ -198,8 +197,96 @@ function LeagueScorers () {
 }
 
 function LeagueMatch () {
+    const [data, setData] = useState([]);
+
+    const style = {
+        text: {
+            textAlign: "center"
+        }
+    }
+
+    const getData = () => {
+        const scorersData = require('../api/en/match.json');
+        setData({
+            match: scorersData.response[0]
+        })
+    }
+    useEffect(()=>{
+        getData()
+    },[])
     return (
-        <Text>mecz</Text>
+        <SafeAreaView>
+            <ScrollView style={{
+                backgroundColor: '#fff',
+                padding: 20,
+                marginTop: 10,
+            }}>
+                <View
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between"
+                    }}
+                >
+                    { data && data.match &&
+                        data.match.statistics.map((data, key) => {
+                            return (
+                                <View
+                                    key={`stat-${key}`}
+                                    style={{
+                                        width: '50%'
+                                    }}
+                                >
+                                    <View>
+                                        <View
+                                            style={{
+                                                display: "flex",
+                                                flexDirection: "row",
+                                                justifyContent: "center"
+                                            }}
+                                        >
+                                            <Image
+                                                style={{
+                                                    width: 100,
+                                                    height: 100,
+                                                }}
+                                                source={{
+                                                    uri: data.team.logo
+                                                }}
+                                            ></Image>
+                                        </View>
+                                        <Text
+                                            style={style.text}
+                                        >
+                                            {data.team.name}
+                                        </Text>
+                                        { data.statistics.map((stat, key2) => {
+                                            return(
+                                                <View
+                                                    key={`stat-${key}-${key2}`}
+                                                >
+                                                    <Text
+                                                        style={style.text}
+                                                    >
+                                                        {stat.type}
+                                                    </Text>
+                                                    <Text
+                                                        style={style.text}
+                                                    >
+                                                        {(stat.value) ? stat.value : 0}
+                                                    </Text>
+                                                </View>
+                                            )
+                                        })}
+                                    </View>
+                                </View>
+                            )
+                        })
+                    }
+                </View>
+
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
