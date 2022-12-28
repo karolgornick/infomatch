@@ -23,6 +23,7 @@
     "react-devtools": "^4.26.1",
     "react-dom": "18.1.0",
     "react-native": "0.70.2",
+    "react-native-dotenv": "^3.4.6",
     "react-native-gesture-handler": "^2.8.0",
     "react-native-pager-view": "^6.1.0",
     "react-native-paper": "^5.0.0-rc.10",
