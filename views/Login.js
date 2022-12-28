@@ -31,6 +31,9 @@ export class Login extends React.Component {
     }
 
     handleSubmit(event) {
+        this.setState({
+            sending: true
+        });
         const config = {
             method: "POST",
             body: JSON.stringify({
@@ -50,6 +53,9 @@ export class Login extends React.Component {
             .then(data => {
                 console.log('--------POBRANE---------')
                 console.log(data)
+                this.setState({
+                    sending: false
+                });
             })
 
         event.preventDefault();
@@ -152,6 +158,7 @@ export class Login extends React.Component {
                     <Pressable
                         style={styles.button}
                         onPress={this.handleSubmit}
+                        disabled={this.state.sending}
                     >
                         <Text>
                             Zaloguj się
