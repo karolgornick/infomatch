@@ -3,8 +3,10 @@ import {
     View,
     Text,
     TextInput,
-    Pressable,
+    Pressable
 } from "react-native";
+import apiData from "../api/apiData";
+import {AsyncStorage} from "@react-native-async-storage/async-storage";
 
 export class Login extends React.Component {
     constructor(props) {
@@ -13,6 +15,9 @@ export class Login extends React.Component {
             login: '',
             password: ''
         };
+        console.log('-----------------------------------------')
+        const data = apiData.users;
+        console.log(data)
         this.handleLoginChange = this.handleLoginChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,9 +32,21 @@ export class Login extends React.Component {
     }
 
     handleSubmit(event) {
+        this.fileFunction()
+
+
+
         alert(`Login: ${this.state.login}, hasło: ${this.state.password}`);
         event.preventDefault();
     }
+
+    fileFunction() {
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+            .then(json => console.log(json))
+    }
+
+
 
     render() {
 

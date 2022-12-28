@@ -1,7 +1,15 @@
 import React from "react";
 import {getCountries} from "../api/FootballAPI";
-import {FlatList, StyleSheet, Text, View} from "react-native";
-import {List} from "react-native-paper";
+import {
+    FlatList,
+    StyleSheet,
+    Text,
+    View,
+    ScrollView,
+} from "react-native";
+import {
+    List
+} from "react-native-paper";
 import {SvgFromUri} from "react-native-svg";
 import {
     Country
@@ -74,35 +82,41 @@ export class CountriesList extends React.Component {
 
 
         return (
-            <View
-                style={styles.container}
-                key="List"
+            <ScrollView
+                style={{
+                    width: '100%'
+                }}
             >
-                {this.state.countries &&
-                    <List.Section
-                        style={{
-                            width: '100%',
-                        }}
-                        key="ListSection"
-                    >
-                        {this.state.countries.map((country) => {
-                            return (
-                                <List.Accordion
-                                    key={country.name}
-                                    style={{
-                                        backgroundColor: 'white',
-                                    }}
-                                    title={country.name}>
-                                    <Country
-                                        code={country.code}
-                                    />
-                                </List.Accordion>
-                            );
-                        })}
+                <View
+                    style={styles.container}
+                    key="List"
+                >
+                    {this.state.countries &&
+                        <List.Section
+                            style={{
+                                width: '100%',
+                            }}
+                            key="ListSection"
+                        >
+                            {this.state.countries.map((country) => {
+                                return (
+                                    <List.Accordion
+                                        key={country.name}
+                                        style={{
+                                            backgroundColor: 'white',
+                                        }}
+                                        title={country.name}>
+                                        <Country
+                                            code={country.code}
+                                        />
+                                    </List.Accordion>
+                                );
+                            })}
 
-                    </List.Section>
-                }
-            </View>
+                        </List.Section>
+                    }
+                </View>
+            </ScrollView>
         );
     }
 }

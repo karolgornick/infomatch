@@ -27,21 +27,21 @@ export default {
             "flag": "https://media.api-sports.io/flags/it.svg",
             "name": "Italy"
         },
-        {
-            "code": "HR",
-            "flag": "https://media.api-sports.io/flags/hr.svg",
-            "name": "Croatia"
-        },
+        // {
+        //     "code": "HR",
+        //     "flag": "https://media.api-sports.io/flags/hr.svg",
+        //     "name": "Croatia"
+        // },
         {
             "code": "GB",
             "flag": "https://media.api-sports.io/flags/gb.svg",
             "name": "England"
         },
-        {
-            "code": "FR",
-            "flag": "https://media.api-sports.io/flags/fr.svg",
-            "name": "France"
-        },
+        // {
+        //     "code": "FR",
+        //     "flag": "https://media.api-sports.io/flags/fr.svg",
+        //     "name": "France"
+        // },
     ],
     "results": 7
 }

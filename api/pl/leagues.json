@@ -1,0 +1,30 @@
+{
+  "get": "leagues",
+  "parameters": {
+    "code": "pl"
+  },
+  "errors": [],
+  "results": 2,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "league": {
+        "id": 106,
+        "name": "Ekstraklasa",
+        "type": "League",
+        "logo": "https://media-5.api-sports.io/football/leagues/106.png"
+      }
+    },
+    {
+      "league": {
+        "id": 107,
+        "name": "I Liga",
+        "type": "League",
+        "logo": "https://media-6.api-sports.io/football/leagues/107.png"
+      }
+    }
+  ]
+}
