@@ -4,19 +4,40 @@ import {
     Text,
     TextInput,
     Pressable,
+    ActivityIndicator
 } from "react-native";
+import {
+    API_HOST
+} from '@env'
 import { useNavigation } from '@react-navigation/native';
 
 export class Register extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            email: '',
             login: '',
-            password: ''
+            password: '',
+            repeatPassword: '',
+            sending: '',
+            errorEmail: '',
+            errorLogin: '',
+            errorPasswords: ''
         };
+        this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handleLoginChange = this.handleLoginChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleRepeatPasswordChange = this.handleRepeatPasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+    }
+
+    handleRepeatPasswordChange(repeatPassword) {
+        this.setState({repeatPassword})
+    }
+
+    handleEmailChange(email) {
+        this.setState({email});
     }
 
     handleLoginChange(login) {
@@ -27,8 +48,83 @@ export class Register extends React.Component {
         this.setState({password});
     }
 
-    handleSubmit(event) {
-        alert(`Login: ${this.state.login}, hasło: ${this.state.password}`);
+    emailValidation (mail) {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)
+    }
+
+    passwordValidation (password) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^&*/()_={}\[\]\\|;:+"'<,>.?-])[A-Za-z\d~`!@#$%^&*/()_={}\[\]\\|;:+"'<,>.?-]{8,}$/.test(password)
+    }
+
+    async userExists (email) {
+        const config = {
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Cache-Control": "max-age=0",
+                'Expires' : '0',
+                'If-Modified-Since': null
+            },
+        }
+
+        const response = await fetch(`${API_HOST}/users`, config),
+            data = await response.json(),
+            sameEmailUser = data.find(item => item.email === email)
+
+        return (sameEmailUser) ? "Uzytkownik z tym emailem istnieje" : ""
+    }
+
+    async handleSubmit(event) {
+        let errorPasswords = (this.state.password === this.state.repeatPassword) ? '' : 'Hasła nie są takie same'
+        errorPasswords = (this.passwordValidation(this.state.password)) ? errorPasswords : 'Hasło powinno mieć co najmniej 8 znaków, jedną dużą literę i jeden znak specjalny'
+        this.setState({
+            errorEmail: (this.emailValidation(this.state.email)) ? '' : 'Nieprawidłowy format adresu email',
+            errorLogin: (this.state.login.length >= 5) ? '' : 'Login powinien mieć co najmniej pięć znaków',
+            errorPasswords
+        })
+
+        if (this.state.errorEmail.length === 0) {
+            const userExist = await this.userExists(this.state.email)
+            if (userExist) {
+                this.setState({
+                    errorEmail: userExist
+                })
+            }
+        }
+
+        if (this.state.errorEmail.length > 0 || this.state.errorLogin.length > 0 || this.state.errorPasswords.length > 0) {
+            return
+        }
+
+        this.setState({
+            sending: true
+        });
+        const config = {
+            method: "POST",
+            body: JSON.stringify({
+                email: this.state.email,
+                login: this.state.login,
+                password: this.state.password
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }
+
+        fetch(`${API_HOST}/users`, config)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                console.log("KONTO ZOSTAŁO UTWORZONE:")
+                console.log(data)
+                this.setState({
+                    sending: false
+                });
+            })
+
         event.preventDefault();
     }
 
@@ -58,6 +154,11 @@ export class Register extends React.Component {
                 marginTop: 0,
                 display: "flex",
                 justifyContent: "center"
+            },
+            error: {
+                marginLeft: 70,
+                color: 'red',
+                marginTop: 2
             },
             button: {
                 marginTop: 20,
@@ -102,10 +203,18 @@ export class Register extends React.Component {
                     </Text>
                     <TextInput
                         style={styles.input}
-                        value={this.state.login}
-                        onChangeText={newText => this.handleLoginChange(newText)}
+                        value={this.state.email}
+                        onChangeText={newText => this.handleEmailChange(newText)}
                     />
                 </View>
+                {this.state.errorEmail &&
+                    <Text
+                        style={styles.error}
+                    >
+                        {this.state.errorEmail}
+                    </Text>
+                }
+
 
                 <View
                     style={styles.container}
@@ -121,6 +230,13 @@ export class Register extends React.Component {
                         onChangeText={newText => this.handleLoginChange(newText)}
                     />
                 </View>
+                {this.state.errorLogin &&
+                    <Text
+                        style={styles.error}
+                    >
+                        {this.state.errorLogin}
+                    </Text>
+                }
 
                 <View
                     style={styles.container}
@@ -137,6 +253,7 @@ export class Register extends React.Component {
                         secureTextEntry={true}
                     />
                 </View>
+
                 <View
                     style={styles.container}
                 >
@@ -147,11 +264,18 @@ export class Register extends React.Component {
                     </Text>
                     <TextInput
                         style={styles.input}
-                        value={this.state.password}
-                        onChangeText={newText => this.handlePasswordChange(newText)}
+                        value={this.state.repeatPassword}
+                        onChangeText={newText => this.handleRepeatPasswordChange(newText)}
                         secureTextEntry={true}
                     />
                 </View>
+                {this.state.errorPasswords &&
+                    <Text
+                        style={styles.error}
+                    >
+                        {this.state.errorPasswords}
+                    </Text>
+                }
 
                 <View
                     style={styles.buttonContainer}
@@ -160,9 +284,14 @@ export class Register extends React.Component {
                         style={styles.button}
                         onPress={this.handleSubmit}
                     >
-                        <Text>
-                            Zarejestruj się
-                        </Text>
+                        {this.state.sending &&
+                            <ActivityIndicator></ActivityIndicator>
+                        }
+                        {!this.state.sending &&
+                            <Text>
+                                Zarejestruj się
+                            </Text>
+                        }
                     </Pressable>
                 </View>
                 <Text

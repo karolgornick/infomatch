@@ -5,9 +5,14 @@ import {
     TextInput,
     Pressable
 } from "react-native";
+
 import {
     API_HOST
 } from '@env'
+
+import FingerPrintScanner from "../components/FingerPrintScanner";
+
+
 
 export class Login extends React.Component {
     constructor(props) {
@@ -35,11 +40,7 @@ export class Login extends React.Component {
             sending: true
         });
         const config = {
-            method: "POST",
-            body: JSON.stringify({
-                login: this.state.login,
-                password: this.state.password
-            }),
+            method: "GET",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -177,6 +178,7 @@ export class Login extends React.Component {
                         Przejdź do rejestracji
                     </Text>
                 </Pressable>
+                <FingerPrintScanner></FingerPrintScanner>
             </View>
         )
     }
