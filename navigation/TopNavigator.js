@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,7 +7,7 @@ import {
 } from "../views/League";
 
 
-import {Button, Text, View} from "react-native";
+import {AsyncStorage, Button, Text, View} from "react-native";
 import {CountriesList} from "../views/Countries";
 
 const Tab = createMaterialTopTabNavigator();
@@ -56,10 +56,41 @@ function LeaguesNavigator() {
 }
 
 const TopNavigator = () => {
+    let mainTab;
+
+    const getMainTab = async () => {
+        // const [tab, setTab] = useState([])
+        mainTab = await AsyncStorage.getItem(
+            '@MainTab'
+        );
+        if (!mainTab) {
+            mainTab === 'Leagues'
+        }
+        // setTab(mainTab)
+        // console.log(tab)
+        console.log(mainTab)
+    }
+
+    getMainTab()
+
+    useEffect(() => {
+
+    }, [])
+
     return (
-        <Tab.Navigator>
-            <Tab.Screen name="Ligi" component={LeaguesNavigator} />
-            <Tab.Screen name="Mecze" component={MatchesScreen} />
+        <Tab.Navigator
+            initialRouteName={mainTab}
+        >
+            <Tab.Screen
+                name="Leagues"
+                component={LeaguesNavigator}
+                options={{ headerTitle: 'Ligi' }}
+            />
+            <Tab.Screen
+                name="Matches"
+                component={MatchesScreen}
+                options={{ headerTitle: 'Mecze' }}
+            />
         </Tab.Navigator>
     );
 };

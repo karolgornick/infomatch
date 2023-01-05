@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity, Alert, Platform } from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity, Alert, Platform, AsyncStorage} from 'react-native';
 import Expo, { Constants } from 'expo';
 import * as LocalAuthentication from 'expo-local-authentication'
+import styles from '../views/styles/LoginAndRegister'
+import { useNavigation } from '@react-navigation/native';
+const navigation = useNavigation();
+
 
 export default class FingerPrintScanner extends Component {
 
@@ -30,7 +34,15 @@ export default class FingerPrintScanner extends Component {
 
     scanFingerprint = async () => {
         let result = await LocalAuthentication.authenticateAsync();
-        console.log('Scan Result:', result)
+        // console.log('Scan Result:', result)
+        if (result.success === true) {
+            const user = await AsyncStorage.getItem('@UserCurrent');
+            await AsyncStorage.setItem(
+                '@User',
+                user
+            );
+            navigation.navigate('Dashboard')
+        }
     }
 
     showAndroidAlert = () => {
@@ -49,43 +61,21 @@ export default class FingerPrintScanner extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>
-                    Compatible Device? {this.state.compatible === true ? 'True' : 'False' }
-                </Text>
-                <Text style={styles.text}>
-                    Fingerprings Saved? {this.state.fingerprints === true ? 'True' : 'False'}
-                </Text>
-                <TouchableOpacity onPress={Platform.OS === 'android' ? this.scanFingerprint : this.scanFingerprint} style={styles.button}>
+                {/*<Text style={styles.text}>*/}
+                {/*    Compatible Device? {this.state.compatible === true ? 'True' : 'False' }*/}
+                {/*</Text>*/}
+                {/*<Text style={styles.text}>*/}
+                {/*    Fingerprings Saved? {this.state.fingerprints === true ? 'True' : 'False'}*/}
+                {/*</Text>*/}
+                <TouchableOpacity
+                    onPress={Platform.OS === 'android' ? this.scanFingerprint : this.scanFingerprint}
+                    style={styles.button}
+                >
                     <Text style={styles.buttonText}>
-                        SCAN
+                        Zaloguj odciskiem palca
                     </Text>
                 </TouchableOpacity>
             </View>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        backgroundColor: '#ecf0f1',
-    },
-    text: {
-        fontSize: 18,
-        textAlign: 'center'
-    },
-    button: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 150,
-        height: 60,
-        backgroundColor: '#056ecf',
-        borderRadius: 5
-    },
-    buttonText: {
-        fontSize: 30,
-        color: '#fff'
-    }
-});

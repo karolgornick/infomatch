@@ -10,6 +10,7 @@ import {
     API_HOST
 } from '@env'
 import { useNavigation } from '@react-navigation/native';
+import styles from './styles/LoginAndRegister'
 
 export class Register extends React.Component {
     constructor(props) {
@@ -129,52 +130,6 @@ export class Register extends React.Component {
     }
 
     render() {
-
-        const styles = {
-            container: {
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                marginTop: 10,
-            },
-            label: {
-                width: 70,
-                textAlign: "right",
-                paddingRight: 10,
-            },
-            input: {
-                flexGrow: 1,
-                borderRadius: 4,
-                borderWidth: 1,
-                borderColor: "grey",
-                paddingHorizontal: 10,
-                paddingVertical: 5,
-            },
-            buttonContainer: {
-                marginTop: 0,
-                display: "flex",
-                justifyContent: "center"
-            },
-            error: {
-                marginLeft: 70,
-                color: 'red',
-                marginTop: 2
-            },
-            button: {
-                marginTop: 20,
-                backgroundColor: "grey",
-                paddingHorizontal: 10,
-                paddingVertical: 10,
-                display: "flex",
-                alignItems: 'center',
-                justifyContent: 'center',
-            },
-            footerText: {
-                marginTop: 20,
-                textAlign: "center",
-            }
-        }
-
         return (
             <View
                 style={{

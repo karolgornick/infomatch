@@ -3,15 +3,18 @@ import {
     View,
     Text,
     TextInput,
-    Pressable
+    Pressable,
+    ActivityIndicator,
+    AsyncStorage
 } from "react-native";
+
+import styles from './styles/LoginAndRegister'
 
 import {
     API_HOST
 } from '@env'
 
 import FingerPrintScanner from "../components/FingerPrintScanner";
-
 
 
 export class Login extends React.Component {
@@ -35,7 +38,24 @@ export class Login extends React.Component {
         this.setState({password});
     }
 
-    handleSubmit(event) {
+    async setUser(data) {
+        const user = data.find(item => item.login === this.state.login)
+        if (user && user.password === this.state.password) {
+            await AsyncStorage.setItem(
+                '@User',
+                JSON.stringify(user)
+            );
+            await AsyncStorage.setItem(
+                '@UserCurrent',
+                JSON.stringify(user)
+            );
+            this.handleLoginChange('')
+            this.handlePasswordChange('')
+            this.props.navigation.navigate("Dashboard");
+        }
+    }
+
+    async handleSubmit(event) {
         this.setState({
             sending: true
         });
@@ -43,67 +63,28 @@ export class Login extends React.Component {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Cache-Control": "max-age=0",
+                'Expires' : '0',
+                'If-Modified-Since': null
             },
         }
 
-        fetch(`${API_HOST}/users`, config)
+        await fetch(`${API_HOST}/users`, config)
             .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                console.log('--------POBRANE---------')
-                console.log(data)
                 this.setState({
                     sending: false
                 });
+                return res.json();
+            })
+            .then(data => {
+                this.setUser(data)
             })
 
         event.preventDefault();
     }
 
     render() {
-
-        const styles = {
-            container: {
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                marginTop: 10,
-            },
-            label: {
-                width: 50,
-                textAlign: "right",
-                paddingRight: 10,
-            },
-            input: {
-                flexGrow: 1,
-                borderRadius: 4,
-                borderWidth: 1,
-                borderColor: "grey",
-                paddingHorizontal: 10,
-                paddingVertical: 5,
-            },
-            buttonContainer: {
-                marginTop: 0,
-                display: "flex",
-                justifyContent: "center"
-            },
-            button: {
-                marginTop: 20,
-                backgroundColor: "grey",
-                paddingHorizontal: 10,
-                paddingVertical: 10,
-                display: "flex",
-                alignItems: 'center',
-                justifyContent: 'center',
-            },
-            footerText: {
-                marginTop: 20,
-                textAlign: "center",
-            }
-        }
-
         return (
             <View
                 style={{
@@ -161,11 +142,17 @@ export class Login extends React.Component {
                         onPress={this.handleSubmit}
                         disabled={this.state.sending}
                     >
-                        <Text>
-                            Zaloguj się
-                        </Text>
+                        {this.state.sending &&
+                            <ActivityIndicator></ActivityIndicator>
+                        }
+                        {!this.state.sending &&
+                            <Text>
+                                Zaloguj się
+                            </Text>
+                        }
                     </Pressable>
                 </View>
+                <FingerPrintScanner></FingerPrintScanner>
                 <Text
                     style={styles.footerText}
                 >
@@ -178,7 +165,6 @@ export class Login extends React.Component {
                         Przejdź do rejestracji
                     </Text>
                 </Pressable>
-                <FingerPrintScanner></FingerPrintScanner>
             </View>
         )
     }
