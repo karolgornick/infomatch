@@ -6,14 +6,18 @@ import {
     TextInput,
     Pressable,
     ScrollView,
-    SafeAreaView, Image,
+    SafeAreaView, Image, AsyncStorage,
 } from "react-native";
 import {Picker} from '@react-native-picker/picker';
 
 import moment from 'moment';
 import apiData from '../api/apiData'
 
-import { useNavigation } from '@react-navigation/native';
+import {
+    NavigationAction
+} from "@react-navigation/native";
+
+import { useNavigation, useIsFocused } from '@react-navigation/native';
 // import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import { Table, Row } from 'react-native-table-component';
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
@@ -25,24 +29,59 @@ import {
 import leagueData from "../api/en/table.json";
 
 export const League = (props) => {
+    const [data, setData] = useState([]);
+    const [lang, setLang] = useState([]);
+    const isFocused = useIsFocused();
+
+    async function getLang() {
+        const language = await AsyncStorage.getItem('@Language');
+        setLang(language)
+    }
+
+    useEffect(()=>{
+        getLang()
+    },[isFocused])
+    useEffect(() => {
+        setData({
+            options: {
+                matches: (lang === 'pl') ? 'Mecze' : 'Matches',
+                table: (lang === 'pl') ? 'Tabela' : 'Table',
+                scorers: (lang === 'pl') ? 'Strzelcy' : 'Scorers',
+                match: (lang === 'pl') ? 'Mecz' : 'Match',
+            }
+        })
+    }, [lang])
     return(
         <Tab.Navigator>
             <Tab.Screen
-                name="Mecze"
+                name="Matches"
                 children={() => <LeagueMatches prop={props} /> }
+                options={{
+                    title: (data && data.options) ? data.options.matches : ''
+                }}
             />
             <Tab.Screen
-                name="Tabela"
+                name="Table"
                 children={() => <LeagueTable prop={props} />}
+                options={{
+                    title: (data && data.options) ? data.options.table : ''
+                }}
             />
             <Tab.Screen
-                name="Strzelcy"
+                name="Scorers"
                 children={() => <LeagueScorers prop={props} /> }
+                options={{
+                    title: (data && data.options) ? data.options.scorers : ''
+                }}
             />
-            <Tab.Screen
-                name="Match"
-                children={() => <LeagueMatch prop={props} />}
-            />
+            {/*<Tab.Screen*/}
+            {/*    name="Match"*/}
+            {/*    // children={() => <LeagueMatch prop={props} />}*/}
+            {/*    component={LeagueMatch}*/}
+            {/*    options={{*/}
+            {/*        title: (data && data.options) ? data.options.match : ''*/}
+            {/*    }}*/}
+            {/*/>*/}
         </Tab.Navigator>
     )
 }
@@ -68,7 +107,13 @@ function LeagueMatches (props) {
     },[])
 
     function redirectToMatch() {
-        navigation.navigate('Tabela')
+        console.log('klik')
+        console.log(props.prop.navigation.s)
+        // props.prop.navigation.navigate('TopNavigator')
+        navigation.navigate('League', {
+            routeName: 'Match'
+        })
+        // navigation.replace('Match')
     }
     return (
         <SafeAreaView>
@@ -107,19 +152,14 @@ function LeagueMatches (props) {
                                     >
                                         <View
                                             style={{
-                                                // borderWidth: 1,
                                                 paddingVertical: 2,
                                                 paddingHorizontal: 5,
                                             }}
                                         >
                                             <Text>
-                                                {/*{new Date(data.fixture.date).toLocaleDateString("pl-PL")}*/}
                                                 {moment(new Date(data.fixture.date)).format('DD.MM.YYYY')}
                                             </Text>
                                             <Text style={{textAlign: "center"}}>
-                                                {/*{new Date(data.fixture.date).toLocaleTimeString("pl-PL", {*/}
-                                                {/*    timeStyle: 'short'*/}
-                                                {/*})}*/}
                                                 {moment(new Date(data.fixture.date)).format('HH:mm')}
                                             </Text>
                                         </View>

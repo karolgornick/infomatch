@@ -9,6 +9,7 @@ import {
 
 import {AsyncStorage, Button, Text, View} from "react-native";
 import {CountriesList} from "../views/Countries";
+import {useIsFocused} from "@react-navigation/native";
 
 const Tab = createMaterialTopTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -78,6 +79,28 @@ const TopNavigator = () => {
 
     }, [])
 
+
+    const [data, setData] = useState([]);
+    const [lang, setLang] = useState([]);
+    const isFocused = useIsFocused();
+
+    async function getLang() {
+        const language = await AsyncStorage.getItem('@Language');
+        setLang(language)
+    }
+
+    useEffect(()=>{
+        getLang()
+    },[isFocused])
+    useEffect(() => {
+        setData({
+            options: {
+                matches: (lang === 'pl') ? 'Mecze' : 'Matches',
+                leagues: (lang === 'pl') ? 'Ligi' : 'Leagues',
+            }
+        })
+    }, [lang])
+
     return (
         <Tab.Navigator
             initialRouteName={mainTab}
@@ -85,12 +108,18 @@ const TopNavigator = () => {
             <Tab.Screen
                 name="Leagues"
                 component={LeaguesNavigator}
-                options={{ headerTitle: 'Ligi' }}
+                options={{
+                    headerTitle: 'Ligi',
+                    tabBarLabel: (data && data.options) ? data.options.leagues : ''
+                }}
             />
             <Tab.Screen
                 name="Matches"
                 component={MatchesScreen}
-                options={{ headerTitle: 'Mecze' }}
+                options={{
+                    headerTitle: 'Mecze',
+                    tabBarLabel: (data && data.options) ? data.options.matches : ''
+                }}
             />
         </Tab.Navigator>
     );

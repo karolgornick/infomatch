@@ -16,6 +16,9 @@ import {Login} from "../views/Login";
 import Settings from "../views/Settings";
 import {Register} from "../views/Register";
 import { useDrawerStatus } from '@react-navigation/drawer';
+import {
+    LeagueMatch
+} from "../views/League";
 
 
 const Drawer = createDrawerNavigator();
