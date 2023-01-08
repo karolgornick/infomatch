@@ -38,7 +38,8 @@ function LeaguesScreen() {
 }
 
 
-function LeaguesNavigator() {
+function LeaguesNavigator(props) {
+
     return (
         <Stack.Navigator>
             <Stack.Screen
@@ -47,7 +48,7 @@ function LeaguesNavigator() {
                 options={{ headerShown: false }}
             />
             <Stack.Screen
-                name="Liga"
+                name="League"
                 component={League}
                 options={{ headerShown: false }}
             />

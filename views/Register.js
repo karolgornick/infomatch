@@ -12,6 +12,8 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles/LoginAndRegister'
 
+
+
 export class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -30,7 +32,6 @@ export class Register extends React.Component {
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleRepeatPasswordChange = this.handleRepeatPasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
     }
 
     handleRepeatPasswordChange(repeatPassword) {
@@ -256,7 +257,7 @@ export class Register extends React.Component {
                 </Text>
                 <Pressable
                     style={styles.button}
-                    onPress={() => navigation.navigate('Register')}
+                    onPress={() => this.props.navigation.navigate('Login')}
                 >
                     <Text>
                         Przejdź do logowania

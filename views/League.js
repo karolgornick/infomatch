@@ -9,7 +9,7 @@ import {
     SafeAreaView, Image,
 } from "react-native";
 
-import axios from "axios";
+import moment from 'moment';
 
 import { useNavigation } from '@react-navigation/native';
 // import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
@@ -18,19 +18,33 @@ import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs
 import scorersData from "../api/en/scorers.json";
 const Tab = createMaterialTopTabNavigator();
 
-export const League = () => {
+export const League = (props) => {
     return(
         <Tab.Navigator>
-            <Tab.Screen name="Mecze" component={LeagueMatches} />
-            <Tab.Screen name="Tabela" component={LeagueTable} />
-            <Tab.Screen name="Top strzelcy" component={LeagueScorers} />
-            <Tab.Screen name="Mecz" component={LeagueMatch} />
+            <Tab.Screen
+                name="Mecze"
+                children={() => <LeagueMatches prop={props} /> }
+            />
+            <Tab.Screen
+                name="Tabela"
+                children={() => <LeagueTable prop={props} />}
+            />
+            <Tab.Screen
+                name="Strzelcy"
+                children={() => <LeagueScorers prop={props} /> }
+            />
+            <Tab.Screen
+                name="Match"
+                children={() => <LeagueMatch prop={props} />}
+            />
         </Tab.Navigator>
     )
 }
 
-function LeagueMatches () {
+function LeagueMatches (props) {
     const navigation = useNavigation();
+    console.log(props.prop.navigation)
+
     const [data, setData] = useState([]);
 
     const getData = () => {
@@ -42,6 +56,10 @@ function LeagueMatches () {
     useEffect(()=>{
         getData()
     },[])
+
+    function redirectToMatch() {
+        navigation.navigate('Tabela')
+    }
     return (
         <SafeAreaView>
             <ScrollView style={{
@@ -49,7 +67,7 @@ function LeagueMatches () {
                 padding: 20,
                 marginTop: 10,
             }}>
-                <Pressable onPress={() => navigation.navigate('Mecz')}>
+                <Pressable onPress={redirectToMatch}>
                     <View>
                         { data && data.matches &&
                             data.matches.map((data, key) => {
@@ -74,26 +92,27 @@ function LeagueMatches () {
                                     >
                                         <View
                                             style={{
-                                                borderWidth: 1,
+                                                // borderWidth: 1,
                                                 paddingVertical: 2,
                                                 paddingHorizontal: 5,
                                             }}
                                         >
                                             <Text>
-                                                {new Date(data.fixture.date).toLocaleDateString("pl")}
+                                                {/*{new Date(data.fixture.date).toLocaleDateString("pl-PL")}*/}
+                                                {moment(new Date(data.fixture.date)).format('DD-MM-YYYY')}
                                             </Text>
                                             <Text style={{textAlign: "center"}}>
-                                                {new Date(data.fixture.date).toLocaleTimeString("pl", {
-                                                    minute: "numeric",
-                                                    hour: "numeric"
-                                                })}
+                                                {/*{new Date(data.fixture.date).toLocaleTimeString("pl-PL", {*/}
+                                                {/*    timeStyle: 'short'*/}
+                                                {/*})}*/}
+                                                {moment(new Date(data.fixture.date)).format('HH:mm')}
                                             </Text>
                                         </View>
                                         <View
                                             style={{
-                                                borderWidth: 1,
+                                                // borderWidth: 1,
                                                 flexGrow: 1,
-                                                paddingVertical: 2,
+                                                paddingVertical: 8,
                                                 paddingHorizontal: 5,
                                                 display: "flex",
                                                 flexDirection: "column",
@@ -117,9 +136,15 @@ function LeagueMatches () {
                                                 {data.teams.away.name}
                                             </Text>
                                         </View>
-                                        <View>
+                                        <View style={{
+                                            display: "flex",
+                                            justifyContent: "center"
+                                        }}>
                                             <Text>
-                                                {data.goals.home}:{data.goals.away}
+                                                {data.goals.home}
+                                            </Text>
+                                            <Text>
+                                                {data.goals.away}
                                             </Text>
                                         </View>
                                     </View>
@@ -290,7 +315,7 @@ function LeagueMatch () {
     )
 }
 
-function LeagueTable () {
+function LeagueTable (prop) {
     const [data, setData] = useState([]);
 
     const getData = () => {
@@ -300,7 +325,7 @@ function LeagueTable () {
             standings: leagueData.response[0].league.standings[0]
         })
     }
-    useEffect(()=>{
+    useEffect(()=> {
         getData()
     },[])
 

@@ -160,6 +160,7 @@ export class Login extends React.Component {
                 </Text>
                 <Pressable
                     style={styles.button}
+                    onPress={() => this.props.navigation.navigate('Register')}
                 >
                     <Text>
                         Przejdź do rejestracji
