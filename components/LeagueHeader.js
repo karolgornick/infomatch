@@ -2,13 +2,13 @@ import {Image, Text, View} from "react-native";
 import React from "react";
 
 function LeagueHeader (props) {
-    console.log(props.data)
     return (
         <View
             style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center"
+                alignItems: "center",
+                marginTop: 10
             }}
         >
             <Image

@@ -22,6 +22,7 @@ const Tab = createMaterialTopTabNavigator();
 import {
     LeagueHeader
 } from "../components/LeagueHeader";
+import leagueData from "../api/en/table.json";
 
 export const League = (props) => {
     return(
@@ -340,14 +341,15 @@ function LeagueTable (props) {
     const [type, setType] = useState([]);
 
     const getData = () => {
-        const leagueData = require('../api/en/table.json');
+        const data = apiData[props.prop.route.params.code.toLowerCase()].tables
+        const tablesData = data.find(item => item.parameters.league == props.prop.route.params.id)
         setData({
-            league: leagueData.response[0].league,
-            standings: leagueData.response[0].league.standings[0]
+            league: tablesData.response[0].league,
+            standings: tablesData.response[0].league.standings[0]
         })
     }
     useEffect(()=> {
-        setType('both')
+        setType('all')
         getData()
     },[])
 
@@ -356,6 +358,7 @@ function LeagueTable (props) {
             body: {
                 borderRightWidth: 1,
                 borderBottomWidth: 1,
+                marginBottom: 10,
             },
             row: {
                 display: "flex",
@@ -381,9 +384,9 @@ function LeagueTable (props) {
         <SafeAreaView>
             <ScrollView style={{
                 backgroundColor: '#fff',
-                padding: 20,
+                paddingHorizontal: 20,
                 marginTop: 10,
-                paddingBottom: 10,
+                //paddingBottom: 10,
             }}>
                 <LeagueHeader
                     data={
@@ -410,7 +413,7 @@ function LeagueTable (props) {
                         />
                         <Picker.Item
                             label="Wyjazd"
-                            value="out"
+                            value="away"
                         />
                     </Picker>
                 </View>
@@ -481,22 +484,22 @@ function LeagueTable (props) {
                                     <Text
                                         style={style.table.rowText}
                                     >
-                                        {data.all.played}
+                                        {data[type].played}
                                     </Text>
                                     <Text
                                         style={style.table.rowText}
                                     >
-                                        {data.all.win}
+                                        {data[type].win}
                                     </Text>
                                     <Text
                                         style={style.table.rowText}
                                     >
-                                        {data.all.draw}
+                                        {data[type].draw}
                                     </Text>
                                     <Text
                                         style={style.table.rowText}
                                     >
-                                        {data.all.lose}
+                                        {data[type].lose}
                                     </Text>
                                     <Text
                                         style={style.table.rowText}
