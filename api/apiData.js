@@ -8,6 +8,10 @@ const apiData = {
         tables: [
             require('./pl/ekstraklasaTable.json'),
             require('./pl/1ligaTable.json')
+        ],
+        scorers: [
+            require('./pl/ekstraklasaTopscorers.json'),
+            require('./pl/1ligaTopscorers.json')
         ]
     },
     de: {
@@ -19,6 +23,10 @@ const apiData = {
         tables: [
             require('./de/bundesligaTable.json'),
             require('./de/2bundesligaTable.json')
+        ],
+        scorers: [
+            require('./de/bundesligaTopscorers.json'),
+            require('./de/2bundesligaTopscorers.json')
         ]
     },
     es: {
@@ -30,6 +38,10 @@ const apiData = {
         tables: [
             require('./es/laligaTable.json'),
             require('./es/segundadivisionTable.json')
+        ],
+        scorers: [
+            require('./es/laligaTopscorers.json'),
+            require('./es/segundadivisionTopscorers.json')
         ]
     },
     it: {
@@ -41,6 +53,10 @@ const apiData = {
         tables: [
             require('./it/serieaTable.json'),
             require('./it/seriebTable.json')
+        ],
+        scorers: [
+            require('./it/serieaTopscorers.json'),
+            require('./it/seriebTopscorers.json')
         ]
     },
     gb: {
@@ -52,6 +68,10 @@ const apiData = {
         tables: [
             require('./gb/premierleagueTable.json'),
             require('./gb/premiershipTable.json')
+        ],
+        scorers: [
+            require('./gb/premierleagueTopscorers.json'),
+            require('./gb/premiershipTopscorers.json')
         ]
     }
 };

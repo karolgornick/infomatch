@@ -1,0 +1,1915 @@
+{
+  "get": "players/topscorers",
+  "parameters": {
+    "league": "141",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 0,
+    "total": 1
+  },
+  "response": [
+    {
+      "player": {
+        "id": 14405,
+        "name": "M. Uzuni",
+        "firstname": "Myrto",
+        "lastname": "Uzuni",
+        "age": 28,
+        "birth": {
+          "date": "1995-05-31",
+          "place": "Berat",
+          "country": "Albania"
+        },
+        "nationality": "Albania",
+        "height": "178 cm",
+        "weight": "72 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/14405.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 715,
+            "name": "Granada CF",
+            "logo": "https://media-1.api-sports.io/football/teams/715.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-3.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 17,
+            "minutes": 1456,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.085000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 8,
+            "bench": 3
+          },
+          "shots": {
+            "total": 37,
+            "on": 21
+          },
+          "goals": {
+            "total": 11,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 287,
+            "key": 15,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 18,
+            "blocks": 1,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": 161,
+            "won": 75
+          },
+          "dribbles": {
+            "attempts": 27,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 26,
+            "committed": 16
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 2,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 146751,
+        "name": "Raúl García",
+        "firstname": "Raúl",
+        "lastname": "García de Haro",
+        "age": 23,
+        "birth": {
+          "date": "2000-11-03",
+          "place": "Olesa de Montserrat",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "192 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/146751.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 799,
+            "name": "Mirandes",
+            "logo": "https://media-2.api-sports.io/football/teams/799.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-3.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-1.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 17,
+            "minutes": 1451,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.100000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 7,
+            "bench": 1
+          },
+          "shots": {
+            "total": 36,
+            "on": 22
+          },
+          "goals": {
+            "total": 9,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 311,
+            "key": 12,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 6,
+            "blocks": 1,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 241,
+            "won": 105
+          },
+          "dribbles": {
+            "attempts": 35,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 29,
+            "committed": 14
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 7720,
+        "name": "S. Bakış",
+        "firstname": "Sinan",
+        "lastname": "Bakış",
+        "age": 29,
+        "birth": {
+          "date": "1994-04-22",
+          "place": "Troisdof",
+          "country": "Germany"
+        },
+        "nationality": "Turkey",
+        "height": "186 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/7720.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 8157,
+            "name": "FC Andorra",
+            "logo": "https://media-3.api-sports.io/football/teams/8157.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-3.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 9,
+            "minutes": 901,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.886666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 7,
+            "out": 4,
+            "bench": 8
+          },
+          "shots": {
+            "total": 30,
+            "on": 15
+          },
+          "goals": {
+            "total": 8,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 152,
+            "key": 4,
+            "accuracy": 8
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": 2,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 106,
+            "won": 57
+          },
+          "dribbles": {
+            "attempts": 12,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 18,
+            "committed": 16
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 2,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47370,
+        "name": "Borja Bastón",
+        "firstname": "Borja",
+        "lastname": "González Tomás",
+        "age": 31,
+        "birth": {
+          "date": "1992-08-25",
+          "place": "Madrid",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "186 cm",
+        "weight": "83 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/47370.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 718,
+            "name": "Oviedo",
+            "logo": "https://media-3.api-sports.io/football/teams/718.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 22,
+            "lineups": 21,
+            "minutes": 1826,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.885714",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 4,
+            "bench": 1
+          },
+          "shots": {
+            "total": 40,
+            "on": 13
+          },
+          "goals": {
+            "total": 8,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 393,
+            "key": 14,
+            "accuracy": 12
+          },
+          "tackles": {
+            "total": 10,
+            "blocks": 3,
+            "interceptions": 5
+          },
+          "duels": {
+            "total": 265,
+            "won": 110
+          },
+          "dribbles": {
+            "attempts": 15,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 32,
+            "committed": 29
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 4,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 104792,
+        "name": "Chris Ramos",
+        "firstname": "Christopher",
+        "lastname": "Ramos de la Flor",
+        "age": 26,
+        "birth": {
+          "date": "1997-01-16",
+          "place": "Cádiz",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "193 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/104792.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 716,
+            "name": "Lugo",
+            "logo": "https://media-3.api-sports.io/football/teams/716.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-1.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 21,
+            "lineups": 18,
+            "minutes": 1631,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.038095",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 4,
+            "bench": 3
+          },
+          "shots": {
+            "total": 48,
+            "on": 19
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 318,
+            "key": 15,
+            "accuracy": 8
+          },
+          "tackles": {
+            "total": 10,
+            "blocks": 1,
+            "interceptions": 5
+          },
+          "duels": {
+            "total": 371,
+            "won": 206
+          },
+          "dribbles": {
+            "attempts": 31,
+            "success": 11,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 43,
+            "committed": 38
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 1,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 48418,
+        "name": "A. Sadiku",
+        "firstname": "Armando Durim",
+        "lastname": "Sadiku",
+        "age": 32,
+        "birth": {
+          "date": "1991-05-27",
+          "place": "Elbasan",
+          "country": "Albania"
+        },
+        "nationality": "Albania",
+        "height": "182 cm",
+        "weight": "81 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/48418.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 5262,
+            "name": "FC Cartagena",
+            "logo": "https://media-1.api-sports.io/football/teams/5262.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-1.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-3.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 21,
+            "lineups": 12,
+            "minutes": 1095,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.761904",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 9,
+            "out": 9,
+            "bench": 9
+          },
+          "shots": {
+            "total": 26,
+            "on": 12
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 194,
+            "key": 9,
+            "accuracy": 7
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": 1,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 128,
+            "won": 42
+          },
+          "dribbles": {
+            "attempts": 10,
+            "success": 4,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 11,
+            "committed": 25
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 3,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 323935,
+        "name": "G. Simeone",
+        "firstname": "Giuliano",
+        "lastname": "Simeone Baldini",
+        "age": 21,
+        "birth": {
+          "date": "2002-12-18",
+          "place": "Roma",
+          "country": "Italy"
+        },
+        "nationality": "Argentina",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/323935.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 732,
+            "name": "Zaragoza",
+            "logo": "https://media-3.api-sports.io/football/teams/732.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-1.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 17,
+            "minutes": 1527,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.740000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 4,
+            "bench": 3
+          },
+          "shots": {
+            "total": 36,
+            "on": 18
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 299,
+            "key": 18,
+            "accuracy": 9
+          },
+          "tackles": {
+            "total": 6,
+            "blocks": null,
+            "interceptions": 8
+          },
+          "duels": {
+            "total": 178,
+            "won": 81
+          },
+          "dribbles": {
+            "attempts": 51,
+            "success": 23,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 32,
+            "committed": 19
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 1,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 46957,
+        "name": "Juan Muñoz",
+        "firstname": "Juan",
+        "lastname": "Muñoz Muñoz",
+        "age": 28,
+        "birth": {
+          "date": "1995-11-12",
+          "place": "Utrera",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "179 cm",
+        "weight": "72 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/46957.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 537,
+            "name": "Leganes",
+            "logo": "https://media-1.api-sports.io/football/teams/537.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-3.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 21,
+            "lineups": 14,
+            "minutes": 1182,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.676190",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 7,
+            "out": 13,
+            "bench": 7
+          },
+          "shots": {
+            "total": 24,
+            "on": 15
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 166,
+            "key": 5,
+            "accuracy": 6
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": 1,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 108,
+            "won": 44
+          },
+          "dribbles": {
+            "attempts": 12,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 12,
+            "committed": 19
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 46740,
+        "name": "Stoichkov",
+        "firstname": "Juan Diego",
+        "lastname": "Molina Martínez",
+        "age": 30,
+        "birth": {
+          "date": "1993-11-05",
+          "place": "Los Barrios",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "178 cm",
+        "weight": "71 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/46740.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 545,
+            "name": "Eibar",
+            "logo": "https://media-1.api-sports.io/football/teams/545.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-1.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-1.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 21,
+            "lineups": 18,
+            "minutes": 1535,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.623809",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 11,
+            "bench": 3
+          },
+          "shots": {
+            "total": 31,
+            "on": 13
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 408,
+            "key": 14,
+            "accuracy": 12
+          },
+          "tackles": {
+            "total": 16,
+            "blocks": null,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 150,
+            "won": 61
+          },
+          "dribbles": {
+            "attempts": 20,
+            "success": 4,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 18,
+            "committed": 12
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47145,
+        "name": "Higinio Marín",
+        "firstname": "Higinio",
+        "lastname": "Marín Escavy",
+        "age": 30,
+        "birth": {
+          "date": "1993-10-19",
+          "place": "Calasparra",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "184 cm",
+        "weight": "74 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/47145.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 722,
+            "name": "Albacete",
+            "logo": "https://media-2.api-sports.io/football/teams/722.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-3.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 15,
+            "minutes": 1328,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.831578",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 4,
+            "out": 6,
+            "bench": 4
+          },
+          "shots": {
+            "total": 22,
+            "on": 11
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 246,
+            "key": 8,
+            "accuracy": 8
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": 4,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 227,
+            "won": 96
+          },
+          "dribbles": {
+            "attempts": 25,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 30,
+            "committed": 22
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47393,
+        "name": "Marc Cardona",
+        "firstname": "Marc",
+        "lastname": "Cardona Rovira",
+        "age": 28,
+        "birth": {
+          "date": "1995-07-08",
+          "place": "Lleida",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "183 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/47393.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 534,
+            "name": "Las Palmas",
+            "logo": "https://media-3.api-sports.io/football/teams/534.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-1.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-1.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 17,
+            "lineups": 13,
+            "minutes": 1113,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.752941",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 4,
+            "out": 10,
+            "bench": 5
+          },
+          "shots": {
+            "total": 21,
+            "on": 17
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 249,
+            "key": 12,
+            "accuracy": 11
+          },
+          "tackles": {
+            "total": 19,
+            "blocks": 1,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 152,
+            "won": 65
+          },
+          "dribbles": {
+            "attempts": 30,
+            "success": 11,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 22,
+            "committed": 18
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47012,
+        "name": "Rubén Castro",
+        "firstname": "Rubén",
+        "lastname": "Castro Martín",
+        "age": 42,
+        "birth": {
+          "date": "1981-06-27",
+          "place": "Las Palmas de Gran Canaria",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "169 cm",
+        "weight": "68 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/47012.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 535,
+            "name": "Malaga",
+            "logo": "https://media-2.api-sports.io/football/teams/535.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 21,
+            "lineups": 20,
+            "minutes": 1685,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.790000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 8,
+            "bench": 2
+          },
+          "shots": {
+            "total": 34,
+            "on": 20
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 275,
+            "key": 19,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 1,
+            "blocks": null,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 72,
+            "won": 23
+          },
+          "dribbles": {
+            "attempts": 11,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 14,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 104855,
+        "name": "Óscar Pinchi",
+        "firstname": "Óscar Francisco",
+        "lastname": "García Quintela",
+        "age": 27,
+        "birth": {
+          "date": "1996-01-17",
+          "place": "A Coruña",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "171 cm",
+        "weight": "62 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/104855.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 799,
+            "name": "Mirandes",
+            "logo": "https://media-3.api-sports.io/football/teams/799.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 17,
+            "lineups": 15,
+            "minutes": 1166,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.250000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 12,
+            "bench": 3
+          },
+          "shots": {
+            "total": 1,
+            "on": 1
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 40,
+            "key": 2,
+            "accuracy": 16
+          },
+          "tackles": {
+            "total": null,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 12,
+            "won": 2
+          },
+          "dribbles": {
+            "attempts": 3,
+            "success": 1,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 91678,
+        "name": "Carlos Martínez",
+        "firstname": "Carlos",
+        "lastname": "Martínez Rodríguez",
+        "age": 37,
+        "birth": {
+          "date": "1986-06-27",
+          "place": "Barcelona",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "185 cm",
+        "weight": "79 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/91678.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 8157,
+            "name": "FC Andorra",
+            "logo": "https://media-1.api-sports.io/football/teams/8157.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-1.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 10,
+            "minutes": 853,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.637500",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 8,
+            "out": 7,
+            "bench": 11
+          },
+          "shots": {
+            "total": 14,
+            "on": 10
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 209,
+            "key": 4,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 4,
+            "blocks": 1,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 68,
+            "won": 25
+          },
+          "dribbles": {
+            "attempts": 6,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 10,
+            "committed": 5
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 182473,
+        "name": "Gaspar Campos",
+        "firstname": "Gaspar",
+        "lastname": "Campos-Ansó Fernández",
+        "age": 23,
+        "birth": {
+          "date": "2000-03-27",
+          "place": "Gijón",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "175 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/182473.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 9580,
+            "name": "Burgos",
+            "logo": "https://media-1.api-sports.io/football/teams/9580.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 17,
+            "lineups": 10,
+            "minutes": 866,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.652941",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 7,
+            "out": 10,
+            "bench": 7
+          },
+          "shots": {
+            "total": 15,
+            "on": 9
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 297,
+            "key": 11,
+            "accuracy": 13
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": null,
+            "interceptions": 5
+          },
+          "duels": {
+            "total": 84,
+            "won": 31
+          },
+          "dribbles": {
+            "attempts": 28,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 10,
+            "committed": 3
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 761,
+        "name": "Cristo González",
+        "firstname": "Cristo Ramón",
+        "lastname": "González Pérez",
+        "age": 26,
+        "birth": {
+          "date": "1997-10-24",
+          "place": "Santa Cruz de Tenerife",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "179 cm",
+        "weight": "69 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/761.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 731,
+            "name": "Sporting Gijon",
+            "logo": "https://media-1.api-sports.io/football/teams/731.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-1.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-3.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 13,
+            "minutes": 977,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.684210",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 13,
+            "bench": 9
+          },
+          "shots": {
+            "total": 19,
+            "on": 8
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 211,
+            "key": 14,
+            "accuracy": 7
+          },
+          "tackles": {
+            "total": 10,
+            "blocks": null,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 109,
+            "won": 36
+          },
+          "dribbles": {
+            "attempts": 18,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 15,
+            "committed": 15
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47180,
+        "name": "Cristian Herrera",
+        "firstname": "Cristian Ignacio",
+        "lastname": "Herrera Pérez",
+        "age": 32,
+        "birth": {
+          "date": "1991-03-23",
+          "place": "Las Palmas de Gran Canaria",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "181 cm",
+        "weight": "76 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/47180.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 9390,
+            "name": "Ibiza",
+            "logo": "https://media-2.api-sports.io/football/teams/9390.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-2.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-1.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 15,
+            "minutes": 1256,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.750000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 8,
+            "bench": 2
+          },
+          "shots": {
+            "total": 26,
+            "on": 9
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 363,
+            "key": 18,
+            "accuracy": 16
+          },
+          "tackles": {
+            "total": 6,
+            "blocks": 1,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 107,
+            "won": 34
+          },
+          "dribbles": {
+            "attempts": 27,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 11,
+            "committed": 13
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47040,
+        "name": "Alfredo Ortuño",
+        "firstname": "Alfredo",
+        "lastname": "Ortuño Martínez",
+        "age": 32,
+        "birth": {
+          "date": "1991-01-21",
+          "place": "Yecla",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "184 cm",
+        "weight": "77 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/47040.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 5262,
+            "name": "FC Cartagena",
+            "logo": "https://media-2.api-sports.io/football/teams/5262.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-3.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-3.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 10,
+            "minutes": 1009,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.736842",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 9,
+            "out": 5,
+            "bench": 9
+          },
+          "shots": {
+            "total": 38,
+            "on": 12
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 194,
+            "key": 7,
+            "accuracy": 7
+          },
+          "tackles": {
+            "total": 7,
+            "blocks": 1,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 156,
+            "won": 54
+          },
+          "dribbles": {
+            "attempts": 22,
+            "success": 8,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 8,
+            "committed": 23
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 2,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 47005,
+        "name": "Maikel Mesa",
+        "firstname": "Maikel",
+        "lastname": "Mesa Piñero",
+        "age": 32,
+        "birth": {
+          "date": "1991-06-04",
+          "place": "Santa Cruz de Tenerife",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "188 cm",
+        "weight": "79 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/47005.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 722,
+            "name": "Albacete",
+            "logo": "https://media-3.api-sports.io/football/teams/722.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-3.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-3.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 20,
+            "minutes": 1580,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.805000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 13,
+            "bench": 0
+          },
+          "shots": {
+            "total": 25,
+            "on": 12
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 523,
+            "key": 15,
+            "accuracy": 21
+          },
+          "tackles": {
+            "total": 17,
+            "blocks": 4,
+            "interceptions": 16
+          },
+          "duels": {
+            "total": 163,
+            "won": 77
+          },
+          "dribbles": {
+            "attempts": 28,
+            "success": 18,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 30,
+            "committed": 24
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 3,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 330,
+        "name": "José Callejón",
+        "firstname": "José María",
+        "lastname": "Callejón Bueno",
+        "age": 36,
+        "birth": {
+          "date": "1987-02-11",
+          "place": "Motril",
+          "country": "Spain"
+        },
+        "nationality": "Spain",
+        "height": "178 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/330.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 715,
+            "name": "Granada CF",
+            "logo": "https://media-1.api-sports.io/football/teams/715.png"
+          },
+          "league": {
+            "id": 141,
+            "name": "Segunda División",
+            "country": "Spain",
+            "logo": "https://media-1.api-sports.io/football/leagues/141.png",
+            "flag": "https://media-2.api-sports.io/flags/es.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 21,
+            "lineups": 20,
+            "minutes": 1718,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.204761",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 14,
+            "bench": 1
+          },
+          "shots": {
+            "total": 26,
+            "on": 10
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 4,
+            "saves": null
+          },
+          "passes": {
+            "total": 615,
+            "key": 39,
+            "accuracy": 23
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": 1,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 128,
+            "won": 64
+          },
+          "dribbles": {
+            "attempts": 13,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 32,
+            "committed": 12
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}

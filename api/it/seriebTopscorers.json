@@ -1,0 +1,1915 @@
+{
+  "get": "players/topscorers",
+  "parameters": {
+    "league": "136",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 0,
+    "total": 1
+  },
+  "response": [
+    {
+      "player": {
+        "id": 128478,
+        "name": "W. Cheddira",
+        "firstname": "Walid",
+        "lastname": "Cheddira",
+        "age": 25,
+        "birth": {
+          "date": "1998-01-22",
+          "place": "Loreto",
+          "country": "Italy"
+        },
+        "nationality": "Morocco",
+        "height": "187 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/128478.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 508,
+            "name": "Bari",
+            "logo": "https://media-2.api-sports.io/football/teams/508.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 13,
+            "lineups": 13,
+            "minutes": 1080,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.323076",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 7,
+            "bench": 1
+          },
+          "shots": {
+            "total": 36,
+            "on": 24
+          },
+          "goals": {
+            "total": 10,
+            "conceded": 0,
+            "assists": 4,
+            "saves": null
+          },
+          "passes": {
+            "total": 190,
+            "key": 19,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 13,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 137,
+            "won": 69
+          },
+          "dribbles": {
+            "attempts": 22,
+            "success": 10,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 26,
+            "committed": 17
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 2,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 56176,
+        "name": "Matteo Luigi Brunori",
+        "firstname": "Matteo Luigi",
+        "lastname": "Brunori",
+        "age": 29,
+        "birth": {
+          "date": "1994-11-01",
+          "place": "Macaè",
+          "country": "Brazil"
+        },
+        "nationality": "Italy",
+        "height": "180 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/56176.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 522,
+            "name": "Palermo",
+            "logo": "https://media-2.api-sports.io/football/teams/522.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-1.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 19,
+            "minutes": 1685,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.961111",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 5,
+            "bench": 0
+          },
+          "shots": {
+            "total": 41,
+            "on": 24
+          },
+          "goals": {
+            "total": 9,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 202,
+            "key": 13,
+            "accuracy": 6
+          },
+          "tackles": {
+            "total": 5,
+            "blocks": 3,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 173,
+            "won": 61
+          },
+          "dribbles": {
+            "attempts": 30,
+            "success": 8,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 25,
+            "committed": 19
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 3,
+            "missed": 2,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 986,
+        "name": "Joel Julius Ilmari Pohjanpalo",
+        "firstname": "Joel Julius Ilmari",
+        "lastname": "Pohjanpalo",
+        "age": 29,
+        "birth": {
+          "date": "1994-09-13",
+          "place": "Helsinki",
+          "country": "Finland"
+        },
+        "nationality": "Finland",
+        "height": "186 cm",
+        "weight": "83 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/986.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 517,
+            "name": "Venezia",
+            "logo": "https://media-2.api-sports.io/football/teams/517.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-1.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 16,
+            "minutes": 1345,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.131250",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 10,
+            "bench": 2
+          },
+          "shots": {
+            "total": 32,
+            "on": 17
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": 4,
+            "saves": null
+          },
+          "passes": {
+            "total": 290,
+            "key": 15,
+            "accuracy": 12
+          },
+          "tackles": {
+            "total": 3,
+            "blocks": 4,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 118,
+            "won": 51
+          },
+          "dribbles": {
+            "attempts": 11,
+            "success": 4,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 8,
+            "committed": 10
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 32201,
+        "name": "Ettore Gliozzi",
+        "firstname": "Ettore",
+        "lastname": "Gliozzi",
+        "age": 28,
+        "birth": {
+          "date": "1995-09-23",
+          "place": "Siderno",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "186 cm",
+        "weight": "83 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/32201.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 801,
+            "name": "Pisa",
+            "logo": "https://media-1.api-sports.io/football/teams/801.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 14,
+            "lineups": 9,
+            "minutes": 890,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.700000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 6,
+            "bench": 5
+          },
+          "shots": {
+            "total": 1,
+            "on": null
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 6,
+            "key": 1,
+            "accuracy": 3
+          },
+          "tackles": {
+            "total": 1,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 5,
+            "won": 2
+          },
+          "dribbles": {
+            "attempts": 1,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": null,
+            "committed": null
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 30790,
+        "name": "Gianluca Lapadula Vargas",
+        "firstname": "Gianluca",
+        "lastname": "Lapadula Vargas",
+        "age": 33,
+        "birth": {
+          "date": "1990-02-07",
+          "place": "Torino",
+          "country": "Italy"
+        },
+        "nationality": "Peru",
+        "height": "178 cm",
+        "weight": "69 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/30790.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 490,
+            "name": "Cagliari",
+            "logo": "https://media-2.api-sports.io/football/teams/490.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 15,
+            "minutes": 1321,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.844444",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 7,
+            "bench": 4
+          },
+          "shots": {
+            "total": 38,
+            "on": 22
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 173,
+            "key": 10,
+            "accuracy": 7
+          },
+          "tackles": {
+            "total": 8,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 136,
+            "won": 51
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": null,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 24,
+            "committed": 27
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 91490,
+        "name": "S. Mulattieri",
+        "firstname": "Samuele",
+        "lastname": "Mulattieri",
+        "age": 23,
+        "birth": {
+          "date": "2000-10-07",
+          "place": "La Spezia",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "183 cm",
+        "weight": "77 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/91490.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 512,
+            "name": "Frosinone",
+            "logo": "https://media-1.api-sports.io/football/teams/512.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-1.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 10,
+            "minutes": 1005,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.744444",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 9,
+            "out": 8,
+            "bench": 9
+          },
+          "shots": {
+            "total": 25,
+            "on": 15
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 192,
+            "key": 12,
+            "accuracy": 8
+          },
+          "tackles": {
+            "total": 8,
+            "blocks": null,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 179,
+            "won": 47
+          },
+          "dribbles": {
+            "attempts": 32,
+            "success": 12,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 7,
+            "committed": 23
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 127945,
+        "name": "Raphael Chidi Odogwu",
+        "firstname": "Raphael Chidi",
+        "lastname": "Odogwu",
+        "age": 32,
+        "birth": {
+          "date": "1991-01-28",
+          "place": null,
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/127945.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 1578,
+            "name": "Sudtirol",
+            "logo": "https://media-1.api-sports.io/football/teams/1578.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 16,
+            "minutes": 1472,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.058823",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 4,
+            "bench": 3
+          },
+          "shots": {
+            "total": 28,
+            "on": 12
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 247,
+            "key": 22,
+            "accuracy": 9
+          },
+          "tackles": {
+            "total": 3,
+            "blocks": 4,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 215,
+            "won": 102
+          },
+          "dribbles": {
+            "attempts": 17,
+            "success": 8,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 36,
+            "committed": 22
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 30663,
+        "name": "Davide Djily Diaw",
+        "firstname": "Davide Djily",
+        "lastname": "Diaw",
+        "age": 31,
+        "birth": {
+          "date": "1992-01-06",
+          "place": "Cividale del Friuli",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "191 cm",
+        "weight": "78 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/30663.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 899,
+            "name": "Modena",
+            "logo": "https://media-1.api-sports.io/football/teams/899.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-2.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 15,
+            "minutes": 1235,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.781250",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 6,
+            "bench": 1
+          },
+          "shots": {
+            "total": 29,
+            "on": 18
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 198,
+            "key": 15,
+            "accuracy": 7
+          },
+          "tackles": {
+            "total": 13,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 215,
+            "won": 85
+          },
+          "dribbles": {
+            "attempts": 40,
+            "success": 18,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 30,
+            "committed": 54
+          },
+          "cards": {
+            "yellow": 6,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 30635,
+        "name": "M. Coda",
+        "firstname": "Massimo",
+        "lastname": "Coda",
+        "age": 35,
+        "birth": {
+          "date": "1988-11-10",
+          "place": "Cava de' Tirreni",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "184 cm",
+        "weight": "72 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/30635.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 495,
+            "name": "Genoa",
+            "logo": "https://media-3.api-sports.io/football/teams/495.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-1.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 17,
+            "minutes": 1407,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.935294",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 10,
+            "bench": 2
+          },
+          "shots": {
+            "total": 27,
+            "on": 15
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 343,
+            "key": 26,
+            "accuracy": 13
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": 1,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 157,
+            "won": 39
+          },
+          "dribbles": {
+            "attempts": 27,
+            "success": 4,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 3,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 322630,
+        "name": "G. Fabbian",
+        "firstname": "Giovanni",
+        "lastname": "Fabbian",
+        "age": 20,
+        "birth": {
+          "date": "2003-01-14",
+          "place": null,
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/322630.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 1692,
+            "name": "Reggina",
+            "logo": "https://media-1.api-sports.io/football/teams/1692.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 18,
+            "minutes": 1446,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.842105",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 9,
+            "bench": 1
+          },
+          "shots": {
+            "total": 22,
+            "on": 12
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 326,
+            "key": 7,
+            "accuracy": 11
+          },
+          "tackles": {
+            "total": 22,
+            "blocks": 6,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": 164,
+            "won": 83
+          },
+          "dribbles": {
+            "attempts": 4,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 26,
+            "committed": 28
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 31503,
+        "name": "Leonardo Mancuso",
+        "firstname": "Leonardo",
+        "lastname": "Mancuso",
+        "age": 31,
+        "birth": {
+          "date": "1992-05-26",
+          "place": "Milano",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "182 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/31503.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 895,
+            "name": "Como",
+            "logo": "https://media-2.api-sports.io/football/teams/895.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-2.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 12,
+            "minutes": 1032,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.886666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 11,
+            "bench": 7
+          },
+          "shots": {
+            "total": 23,
+            "on": 12
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 165,
+            "key": 8,
+            "accuracy": 8
+          },
+          "tackles": {
+            "total": 6,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 105,
+            "won": 42
+          },
+          "dribbles": {
+            "attempts": 13,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 17,
+            "committed": 15
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 20782,
+        "name": "Florian Ayé",
+        "firstname": "Florian",
+        "lastname": "Ayé",
+        "age": 26,
+        "birth": {
+          "date": "1997-01-19",
+          "place": "Paris",
+          "country": "France"
+        },
+        "nationality": "France",
+        "height": "184 cm",
+        "weight": "79 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/20782.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 518,
+            "name": "Brescia",
+            "logo": "https://media-1.api-sports.io/football/teams/518.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-1.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 17,
+            "minutes": 1326,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.650000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 12,
+            "bench": 1
+          },
+          "shots": {
+            "total": 23,
+            "on": 11
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 274,
+            "key": 3,
+            "accuracy": 9
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 188,
+            "won": 79
+          },
+          "dribbles": {
+            "attempts": 17,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 11,
+            "committed": 18
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 56851,
+        "name": "M. Folorunsho",
+        "firstname": "Michael Ijemuan",
+        "lastname": "Folorunsho",
+        "age": 25,
+        "birth": {
+          "date": "1998-02-07",
+          "place": "Rome",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "185 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/56851.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 508,
+            "name": "Bari",
+            "logo": "https://media-3.api-sports.io/football/teams/508.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 18,
+            "minutes": 1416,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.050000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 11,
+            "bench": 0
+          },
+          "shots": {
+            "total": 31,
+            "on": 12
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 442,
+            "key": 11,
+            "accuracy": 17
+          },
+          "tackles": {
+            "total": 31,
+            "blocks": 2,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": 230,
+            "won": 130
+          },
+          "dribbles": {
+            "attempts": 39,
+            "success": 18,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 41,
+            "committed": 25
+          },
+          "cards": {
+            "yellow": 7,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 162181,
+        "name": "N. Bonfanti",
+        "firstname": "Nicholas",
+        "lastname": "Bonfanti",
+        "age": 21,
+        "birth": {
+          "date": "2002-03-28",
+          "place": null,
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/162181.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 899,
+            "name": "Modena",
+            "logo": "https://media-3.api-sports.io/football/teams/899.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-2.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 15,
+            "lineups": 7,
+            "minutes": 656,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.692857",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 8,
+            "out": 6,
+            "bench": 11
+          },
+          "shots": {
+            "total": 21,
+            "on": 7
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 111,
+            "key": 5,
+            "accuracy": 4
+          },
+          "tackles": {
+            "total": 4,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 93,
+            "won": 33
+          },
+          "dribbles": {
+            "attempts": 13,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 15
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 31497,
+        "name": "Mirko Antonucci",
+        "firstname": "Mirko",
+        "lastname": "Antonucci",
+        "age": 24,
+        "birth": {
+          "date": "1999-03-11",
+          "place": "Roma",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "178 cm",
+        "weight": "72 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/31497.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 510,
+            "name": "Cittadella",
+            "logo": "https://media-2.api-sports.io/football/teams/510.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 19,
+            "minutes": 1415,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.664705",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 15,
+            "bench": 0
+          },
+          "shots": {
+            "total": 20,
+            "on": 7
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 295,
+            "key": 16,
+            "accuracy": 12
+          },
+          "tackles": {
+            "total": 12,
+            "blocks": null,
+            "interceptions": 5
+          },
+          "duels": {
+            "total": 153,
+            "won": 65
+          },
+          "dribbles": {
+            "attempts": 51,
+            "success": 17,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 28,
+            "committed": 18
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 30573,
+        "name": "L. Pavoletti",
+        "firstname": "Leonardo",
+        "lastname": "Pavoletti",
+        "age": 35,
+        "birth": {
+          "date": "1988-11-26",
+          "place": "Livorno",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "188 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/30573.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 490,
+            "name": "Cagliari",
+            "logo": "https://media-3.api-sports.io/football/teams/490.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 6,
+            "minutes": 660,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.862500",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 10,
+            "out": 2,
+            "bench": 10
+          },
+          "shots": {
+            "total": 27,
+            "on": 10
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 189,
+            "key": 6,
+            "accuracy": 7
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": 1,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 114,
+            "won": 69
+          },
+          "dribbles": {
+            "attempts": 5,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 10,
+            "committed": 19
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 30876,
+        "name": "M. Antenucci",
+        "firstname": "Mirco",
+        "lastname": "Antenucci",
+        "age": 39,
+        "birth": {
+          "date": "1984-09-08",
+          "place": "Termoli",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "178 cm",
+        "weight": "68 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/30876.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 508,
+            "name": "Bari",
+            "logo": "https://media-1.api-sports.io/football/teams/508.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-2.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 15,
+            "minutes": 1105,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.818750",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 14,
+            "bench": 3
+          },
+          "shots": {
+            "total": 21,
+            "on": 9
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 315,
+            "key": 23,
+            "accuracy": 15
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": 4
+          },
+          "duels": {
+            "total": 70,
+            "won": 28
+          },
+          "dribbles": {
+            "attempts": 18,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 16,
+            "committed": 7
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 57016,
+        "name": "Diomandè Yann Cedric Gondo",
+        "firstname": "Diomandè Yann Cedric",
+        "lastname": "Gondo",
+        "age": 27,
+        "birth": {
+          "date": "1996-11-25",
+          "place": "Divo",
+          "country": "Côte d'Ivoire"
+        },
+        "nationality": "Côte d'Ivoire",
+        "height": "187 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/57016.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 507,
+            "name": "Ascoli",
+            "logo": "https://media-1.api-sports.io/football/teams/507.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-3.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 16,
+            "lineups": 14,
+            "minutes": 1153,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.887500",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 9,
+            "bench": 2
+          },
+          "shots": {
+            "total": 21,
+            "on": 10
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 212,
+            "key": 10,
+            "accuracy": 8
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": 2,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 267,
+            "won": 109
+          },
+          "dribbles": {
+            "attempts": 28,
+            "success": 13,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 32,
+            "committed": 42
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 1,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 31153,
+        "name": "Ernesto Torregrossa",
+        "firstname": "Ernesto",
+        "lastname": "Torregrossa",
+        "age": 31,
+        "birth": {
+          "date": "1992-06-28",
+          "place": "Caltanissetta",
+          "country": "Italy"
+        },
+        "nationality": "Venezuela",
+        "height": "184 cm",
+        "weight": "80 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/31153.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 801,
+            "name": "Pisa",
+            "logo": "https://media-2.api-sports.io/football/teams/801.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-2.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 13,
+            "lineups": 8,
+            "minutes": 567,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.775000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 8,
+            "bench": 5
+          },
+          "shots": {
+            "total": 5,
+            "on": 3
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 93,
+            "key": 1,
+            "accuracy": 4
+          },
+          "tackles": {
+            "total": 1,
+            "blocks": 1,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 81,
+            "won": 39
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 22,
+            "committed": 13
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 2,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 30665,
+        "name": "Gabriele Moncini",
+        "firstname": "Gabriele",
+        "lastname": "Moncini",
+        "age": 27,
+        "birth": {
+          "date": "1996-04-26",
+          "place": "Pistoia",
+          "country": "Italy"
+        },
+        "nationality": "Italy",
+        "height": "184 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/30665.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 493,
+            "name": "Spal",
+            "logo": "https://media-3.api-sports.io/football/teams/493.png"
+          },
+          "league": {
+            "id": 136,
+            "name": "Serie B",
+            "country": "Italy",
+            "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+            "flag": "https://media-1.api-sports.io/flags/it.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 15,
+            "lineups": 14,
+            "minutes": 1067,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.980000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 9,
+            "bench": 1
+          },
+          "shots": {
+            "total": 24,
+            "on": 12
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 4,
+            "saves": null
+          },
+          "passes": {
+            "total": 196,
+            "key": 9,
+            "accuracy": 9
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": 2,
+            "interceptions": 4
+          },
+          "duels": {
+            "total": 119,
+            "won": 57
+          },
+          "dribbles": {
+            "attempts": 10,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 15,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}

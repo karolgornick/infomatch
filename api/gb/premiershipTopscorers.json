@@ -1,0 +1,1915 @@
+{
+  "get": "players/topscorers",
+  "parameters": {
+    "league": "179",
+    "season": "2022"
+  },
+  "errors": [],
+  "results": 20,
+  "paging": {
+    "current": 0,
+    "total": 1
+  },
+  "response": [
+    {
+      "player": {
+        "id": 33253,
+        "name": "K. Furuhashi",
+        "firstname": "Kyogo",
+        "lastname": "Furuhashi",
+        "age": 28,
+        "birth": {
+          "date": "1995-01-20",
+          "place": "Nara",
+          "country": "Japan"
+        },
+        "nationality": "Japan",
+        "height": "170 cm",
+        "weight": "63 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/33253.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 247,
+            "name": "Celtic",
+            "logo": "https://media-3.api-sports.io/football/teams/247.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-1.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-1.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 16,
+            "minutes": 1168,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.188235",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 14,
+            "bench": 4
+          },
+          "shots": {
+            "total": 39,
+            "on": 23
+          },
+          "goals": {
+            "total": 15,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 135,
+            "key": 6,
+            "accuracy": 5
+          },
+          "tackles": {
+            "total": 8,
+            "blocks": null,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 69,
+            "won": 24
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": 3,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 12,
+            "committed": 16
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 45175,
+        "name": "L. Shankland",
+        "firstname": "Lawrence",
+        "lastname": "Shankland",
+        "age": 28,
+        "birth": {
+          "date": "1995-08-10",
+          "place": "Glasgow",
+          "country": "Scotland"
+        },
+        "nationality": "Scotland",
+        "height": "185 cm",
+        "weight": "78 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/45175.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 254,
+            "name": "Heart OF Midlothian",
+            "logo": "https://media-2.api-sports.io/football/teams/254.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-2.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 15,
+            "minutes": 1432,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.184210",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 4,
+            "out": 3,
+            "bench": 4
+          },
+          "shots": {
+            "total": 44,
+            "on": 30
+          },
+          "goals": {
+            "total": 15,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 363,
+            "key": 14,
+            "accuracy": 13
+          },
+          "tackles": {
+            "total": 12,
+            "blocks": 4,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 187,
+            "won": 61
+          },
+          "dribbles": {
+            "attempts": 21,
+            "success": 9,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 18,
+            "committed": 22
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 8,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 14293,
+        "name": "A. Čolak",
+        "firstname": "Antonio-Mirko",
+        "lastname": "Čolak",
+        "age": 30,
+        "birth": {
+          "date": "1993-09-17",
+          "place": "Ludwigsburg",
+          "country": "Germany"
+        },
+        "nationality": "Croatia",
+        "height": "187 cm",
+        "weight": "83 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/14293.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 257,
+            "name": "Rangers",
+            "logo": "https://media-2.api-sports.io/football/teams/257.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-2.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 14,
+            "lineups": 14,
+            "minutes": 1055,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.392857",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 10,
+            "bench": 1
+          },
+          "shots": {
+            "total": 39,
+            "on": 20
+          },
+          "goals": {
+            "total": 11,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 190,
+            "key": 9,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 2,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 90,
+            "won": 33
+          },
+          "dribbles": {
+            "attempts": 9,
+            "success": 5,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 13,
+            "committed": 14
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 109564,
+        "name": "B. Miovski",
+        "firstname": "Bojan",
+        "lastname": "Miovski",
+        "age": 24,
+        "birth": {
+          "date": "1999-06-24",
+          "place": null,
+          "country": "North Macedonia"
+        },
+        "nationality": "North Macedonia",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/109564.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 252,
+            "name": "Aberdeen",
+            "logo": "https://media-1.api-sports.io/football/teams/252.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-1.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 20,
+            "minutes": 1632,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.800000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 12,
+            "bench": 0
+          },
+          "shots": {
+            "total": 37,
+            "on": 23
+          },
+          "goals": {
+            "total": 11,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 276,
+            "key": 14,
+            "accuracy": 9
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": null,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 189,
+            "won": 56
+          },
+          "dribbles": {
+            "attempts": 17,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 12,
+            "committed": 21
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 5,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 20480,
+        "name": "K. van Veen",
+        "firstname": "Kevin",
+        "lastname": "van Veen",
+        "age": 32,
+        "birth": {
+          "date": "1991-06-01",
+          "place": "Eindhoven",
+          "country": "Netherlands"
+        },
+        "nationality": "Netherlands",
+        "height": "189 cm",
+        "weight": "85 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/20480.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 256,
+            "name": "Motherwell",
+            "logo": "https://media-2.api-sports.io/football/teams/256.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-1.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 18,
+            "minutes": 1562,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.815789",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 4,
+            "bench": 1
+          },
+          "shots": {
+            "total": 44,
+            "on": 24
+          },
+          "goals": {
+            "total": 9,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 312,
+            "key": 15,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 12,
+            "blocks": 2,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 214,
+            "won": 73
+          },
+          "dribbles": {
+            "attempts": 36,
+            "success": 17,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 21,
+            "committed": 23
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 3,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 136138,
+        "name": "L. Abada",
+        "firstname": "Liel",
+        "lastname": "Abada",
+        "age": 22,
+        "birth": {
+          "date": "2001-10-03",
+          "place": "Petach Tikva",
+          "country": "Israel"
+        },
+        "nationality": "Israel",
+        "height": "165 cm",
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/136138.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 247,
+            "name": "Celtic",
+            "logo": "https://media-3.api-sports.io/football/teams/247.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-2.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 7,
+            "minutes": 857,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.040000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 13,
+            "out": 6,
+            "bench": 13
+          },
+          "shots": {
+            "total": 30,
+            "on": 19
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 343,
+            "key": 25,
+            "accuracy": 14
+          },
+          "tackles": {
+            "total": 9,
+            "blocks": 1,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 87,
+            "won": 27
+          },
+          "dribbles": {
+            "attempts": 27,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 9,
+            "committed": 11
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 162944,
+        "name": "Duk",
+        "firstname": "Luís Henrique",
+        "lastname": "de Barros Lopes",
+        "age": 23,
+        "birth": {
+          "date": "2000-02-16",
+          "place": "Lisboa",
+          "country": "Portugal"
+        },
+        "nationality": "Cape Verde",
+        "height": null,
+        "weight": null,
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/162944.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 252,
+            "name": "Aberdeen",
+            "logo": "https://media-3.api-sports.io/football/teams/252.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 12,
+            "minutes": 1114,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.810000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 8,
+            "out": 7,
+            "bench": 8
+          },
+          "shots": {
+            "total": 24,
+            "on": 14
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 169,
+            "key": 13,
+            "accuracy": 6
+          },
+          "tackles": {
+            "total": 15,
+            "blocks": null,
+            "interceptions": 1
+          },
+          "duels": {
+            "total": 208,
+            "won": 91
+          },
+          "dribbles": {
+            "attempts": 42,
+            "success": 17,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 35,
+            "committed": 13
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 1744,
+        "name": "J. Tavernier",
+        "firstname": "James Henry",
+        "lastname": "Tavernier",
+        "age": 32,
+        "birth": {
+          "date": "1991-10-31",
+          "place": "Bradford",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "182 cm",
+        "weight": "75 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/1744.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 257,
+            "name": "Rangers",
+            "logo": "https://media-1.api-sports.io/football/teams/257.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 20,
+            "minutes": 1776,
+            "number": null,
+            "position": "Defender",
+            "rating": "7.540000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 0,
+            "out": 1,
+            "bench": 0
+          },
+          "shots": {
+            "total": 35,
+            "on": 21
+          },
+          "goals": {
+            "total": 7,
+            "conceded": 0,
+            "assists": 5,
+            "saves": null
+          },
+          "passes": {
+            "total": 1342,
+            "key": 58,
+            "accuracy": 55
+          },
+          "tackles": {
+            "total": 35,
+            "blocks": 3,
+            "interceptions": 19
+          },
+          "duels": {
+            "total": 168,
+            "won": 89
+          },
+          "dribbles": {
+            "attempts": 34,
+            "success": 15,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 16
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 4,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 26902,
+        "name": "G. Giakoumakis",
+        "firstname": "Georgios",
+        "lastname": "Giakoumakis",
+        "age": 29,
+        "birth": {
+          "date": "1994-12-09",
+          "place": "Heraklion",
+          "country": "Greece"
+        },
+        "nationality": "Greece",
+        "height": "185 cm",
+        "weight": "84 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/26902.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 247,
+            "name": "Celtic",
+            "logo": "https://media-2.api-sports.io/football/teams/247.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 4,
+            "minutes": 659,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.850000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 14,
+            "out": 2,
+            "bench": 14
+          },
+          "shots": {
+            "total": 35,
+            "on": 16
+          },
+          "goals": {
+            "total": 6,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 119,
+            "key": 8,
+            "accuracy": 4
+          },
+          "tackles": {
+            "total": 6,
+            "blocks": null,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 86,
+            "won": 34
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 7,
+            "committed": 19
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 1,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 581,
+        "name": "Jota",
+        "firstname": "João Pedro",
+        "lastname": "Neves Filipe",
+        "age": 24,
+        "birth": {
+          "date": "1999-03-30",
+          "place": "Lisbon",
+          "country": "Portugal"
+        },
+        "nationality": "Portugal",
+        "height": "175 cm",
+        "weight": "60 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/581.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 247,
+            "name": "Celtic",
+            "logo": "https://media-2.api-sports.io/football/teams/247.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-1.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-1.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 12,
+            "minutes": 1051,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.366666",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 8,
+            "bench": 6
+          },
+          "shots": {
+            "total": 27,
+            "on": 14
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 6,
+            "saves": null
+          },
+          "passes": {
+            "total": 495,
+            "key": 34,
+            "accuracy": 21
+          },
+          "tackles": {
+            "total": 18,
+            "blocks": 1,
+            "interceptions": 4
+          },
+          "duels": {
+            "total": 126,
+            "won": 58
+          },
+          "dribbles": {
+            "attempts": 50,
+            "success": 22,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 14,
+            "committed": 8
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 33224,
+        "name": "D. Maeda",
+        "firstname": "Daizen",
+        "lastname": "Maeda",
+        "age": 26,
+        "birth": {
+          "date": "1997-10-20",
+          "place": "Taishi",
+          "country": "Japan"
+        },
+        "nationality": "Japan",
+        "height": "173 cm",
+        "weight": "67 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/33224.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 247,
+            "name": "Celtic",
+            "logo": "https://media-1.api-sports.io/football/teams/247.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 12,
+            "minutes": 895,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.941176",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 12,
+            "bench": 8
+          },
+          "shots": {
+            "total": 15,
+            "on": 7
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 4,
+            "saves": null
+          },
+          "passes": {
+            "total": 275,
+            "key": 17,
+            "accuracy": 12
+          },
+          "tackles": {
+            "total": 21,
+            "blocks": 1,
+            "interceptions": 8
+          },
+          "duels": {
+            "total": 88,
+            "won": 41
+          },
+          "dribbles": {
+            "attempts": 11,
+            "success": 4,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 11,
+            "committed": 15
+          },
+          "cards": {
+            "yellow": 1,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 1761,
+        "name": "A. Morelos",
+        "firstname": "Alfredo José",
+        "lastname": "Morelos Aviléz",
+        "age": 27,
+        "birth": {
+          "date": "1996-06-21",
+          "place": "Cereté",
+          "country": "Colombia"
+        },
+        "nationality": "Colombia",
+        "height": "177 cm",
+        "weight": "79 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/1761.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 257,
+            "name": "Rangers",
+            "logo": "https://media-2.api-sports.io/football/teams/257.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 17,
+            "lineups": 5,
+            "minutes": 677,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.782352",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 12,
+            "out": 3,
+            "bench": 13
+          },
+          "shots": {
+            "total": 25,
+            "on": 11
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 231,
+            "key": 14,
+            "accuracy": 10
+          },
+          "tackles": {
+            "total": 5,
+            "blocks": null,
+            "interceptions": null
+          },
+          "duels": {
+            "total": 71,
+            "won": 30
+          },
+          "dribbles": {
+            "attempts": 14,
+            "success": 6,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 19104,
+        "name": "J. Lundstram",
+        "firstname": "John David",
+        "lastname": "Lundstram",
+        "age": 29,
+        "birth": {
+          "date": "1994-02-18",
+          "place": "Liverpool",
+          "country": "England"
+        },
+        "nationality": "England",
+        "height": "181 cm",
+        "weight": "78 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/19104.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 257,
+            "name": "Rangers",
+            "logo": "https://media-2.api-sports.io/football/teams/257.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 19,
+            "minutes": 1650,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.170000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 4,
+            "bench": 1
+          },
+          "shots": {
+            "total": 25,
+            "on": 12
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": null,
+            "saves": null
+          },
+          "passes": {
+            "total": 1426,
+            "key": 14,
+            "accuracy": 63
+          },
+          "tackles": {
+            "total": 27,
+            "blocks": 3,
+            "interceptions": 22
+          },
+          "duels": {
+            "total": 159,
+            "won": 74
+          },
+          "dribbles": {
+            "attempts": 19,
+            "success": 11,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 17,
+            "committed": 23
+          },
+          "cards": {
+            "yellow": 4,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 45063,
+        "name": "D. Armstrong",
+        "firstname": "Daniel",
+        "lastname": "Armstrong",
+        "age": 26,
+        "birth": {
+          "date": "1997-10-11",
+          "place": null,
+          "country": "Scotland"
+        },
+        "nationality": "Scotland",
+        "height": "175 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/45063.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 250,
+            "name": "Kilmarnock",
+            "logo": "https://media-1.api-sports.io/football/teams/250.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 20,
+            "lineups": 15,
+            "minutes": 1383,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.045000",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 5,
+            "out": 5,
+            "bench": 5
+          },
+          "shots": {
+            "total": 17,
+            "on": 6
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 448,
+            "key": 38,
+            "accuracy": 16
+          },
+          "tackles": {
+            "total": 22,
+            "blocks": 1,
+            "interceptions": 14
+          },
+          "duels": {
+            "total": 189,
+            "won": 82
+          },
+          "dribbles": {
+            "attempts": 52,
+            "success": 25,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 26,
+            "committed": 26
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 1,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 44843,
+        "name": "M. Boyle",
+        "firstname": "Martin Callie",
+        "lastname": "Boyle",
+        "age": 30,
+        "birth": {
+          "date": "1993-04-25",
+          "place": "Aberdeen",
+          "country": "Scotland"
+        },
+        "nationality": "Australia",
+        "height": "172 cm",
+        "weight": "66 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/44843.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 249,
+            "name": "Hibernian",
+            "logo": "https://media-1.api-sports.io/football/teams/249.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 12,
+            "lineups": 10,
+            "minutes": 936,
+            "number": null,
+            "position": "Attacker",
+            "rating": "7.083333",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 2,
+            "out": 1,
+            "bench": 2
+          },
+          "shots": {
+            "total": 19,
+            "on": 14
+          },
+          "goals": {
+            "total": 5,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 237,
+            "key": 29,
+            "accuracy": 16
+          },
+          "tackles": {
+            "total": 10,
+            "blocks": null,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 95,
+            "won": 36
+          },
+          "dribbles": {
+            "attempts": 21,
+            "success": 8,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 18,
+            "committed": 14
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 2,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 162037,
+        "name": "M. Tillman",
+        "firstname": "Malik Leon",
+        "lastname": "Tillman",
+        "age": 21,
+        "birth": {
+          "date": "2002-05-28",
+          "place": "Nürnberg",
+          "country": "Germany"
+        },
+        "nationality": "USA",
+        "height": "187 cm",
+        "weight": "71 kg",
+        "injured": false,
+        "photo": "https://media-2.api-sports.io/football/players/162037.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 257,
+            "name": "Rangers",
+            "logo": "https://media-3.api-sports.io/football/teams/257.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-2.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 15,
+            "minutes": 1280,
+            "number": null,
+            "position": "Attacker",
+            "rating": "6.988888",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 3,
+            "out": 9,
+            "bench": 5
+          },
+          "shots": {
+            "total": 24,
+            "on": 12
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 4,
+            "saves": null
+          },
+          "passes": {
+            "total": 481,
+            "key": 26,
+            "accuracy": 20
+          },
+          "tackles": {
+            "total": 38,
+            "blocks": 2,
+            "interceptions": 14
+          },
+          "duels": {
+            "total": 241,
+            "won": 121
+          },
+          "dribbles": {
+            "attempts": 59,
+            "success": 27,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 27,
+            "committed": 26
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 70335,
+        "name": "D. Levitt",
+        "firstname": "Dylan James Christopher",
+        "lastname": "Levitt",
+        "age": 23,
+        "birth": {
+          "date": "2000-11-17",
+          "place": "Bodelwyddan",
+          "country": "Wales"
+        },
+        "nationality": "Wales",
+        "height": "180 cm",
+        "weight": "73 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/70335.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 1386,
+            "name": "Dundee Utd",
+            "logo": "https://media-3.api-sports.io/football/teams/1386.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-1.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-3.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 17,
+            "lineups": 16,
+            "minutes": 1395,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.047058",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 6,
+            "bench": 1
+          },
+          "shots": {
+            "total": 12,
+            "on": 7
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 3,
+            "saves": null
+          },
+          "passes": {
+            "total": 733,
+            "key": 17,
+            "accuracy": 35
+          },
+          "tackles": {
+            "total": 30,
+            "blocks": 5,
+            "interceptions": 11
+          },
+          "duels": {
+            "total": 99,
+            "won": 46
+          },
+          "dribbles": {
+            "attempts": 17,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 4,
+            "committed": 9
+          },
+          "cards": {
+            "yellow": 3,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 1127,
+        "name": "J. Forrest",
+        "firstname": "James",
+        "lastname": "Forrest",
+        "age": 32,
+        "birth": {
+          "date": "1991-07-07",
+          "place": "Prestwick",
+          "country": "Scotland"
+        },
+        "nationality": "Scotland",
+        "height": "170 cm",
+        "weight": "67 kg",
+        "injured": false,
+        "photo": "https://media-1.api-sports.io/football/players/1127.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 247,
+            "name": "Celtic",
+            "logo": "https://media-2.api-sports.io/football/teams/247.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-1.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 11,
+            "lineups": 5,
+            "minutes": 442,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "7.136363",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 6,
+            "out": 5,
+            "bench": 15
+          },
+          "shots": {
+            "total": 10,
+            "on": 7
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 2,
+            "saves": null
+          },
+          "passes": {
+            "total": 194,
+            "key": 9,
+            "accuracy": 14
+          },
+          "tackles": {
+            "total": 4,
+            "blocks": null,
+            "interceptions": 2
+          },
+          "duels": {
+            "total": 34,
+            "won": 16
+          },
+          "dribbles": {
+            "attempts": 12,
+            "success": 7,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 5,
+            "committed": 2
+          },
+          "cards": {
+            "yellow": 0,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 17776,
+        "name": "A. Taylor",
+        "firstname": "Ashton John",
+        "lastname": "Taylor",
+        "age": 33,
+        "birth": {
+          "date": "1990-09-02",
+          "place": "Bromborough",
+          "country": "England"
+        },
+        "nationality": "Wales",
+        "height": "193 cm",
+        "weight": "76 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/17776.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 250,
+            "name": "Kilmarnock",
+            "logo": "https://media-3.api-sports.io/football/teams/250.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-2.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-1.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 19,
+            "lineups": 18,
+            "minutes": 1524,
+            "number": null,
+            "position": "Defender",
+            "rating": "6.863157",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 1,
+            "out": 3,
+            "bench": 1
+          },
+          "shots": {
+            "total": 18,
+            "on": 5
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 636,
+            "key": 3,
+            "accuracy": 22
+          },
+          "tackles": {
+            "total": 16,
+            "blocks": 12,
+            "interceptions": 41
+          },
+          "duels": {
+            "total": 165,
+            "won": 108
+          },
+          "dribbles": {
+            "attempts": 2,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 8,
+            "committed": 21
+          },
+          "cards": {
+            "yellow": 5,
+            "yellowred": 0,
+            "red": 1
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    },
+    {
+      "player": {
+        "id": 1747,
+        "name": "S. Arfield",
+        "firstname": "Scott Harry Nathaniel",
+        "lastname": "Arfield",
+        "age": 35,
+        "birth": {
+          "date": "1988-11-01",
+          "place": "Livingston",
+          "country": "Scotland"
+        },
+        "nationality": "Canada",
+        "height": "178 cm",
+        "weight": "70 kg",
+        "injured": false,
+        "photo": "https://media-3.api-sports.io/football/players/1747.png"
+      },
+      "statistics": [
+        {
+          "team": {
+            "id": 257,
+            "name": "Rangers",
+            "logo": "https://media-1.api-sports.io/football/teams/257.png"
+          },
+          "league": {
+            "id": 179,
+            "name": "Premiership",
+            "country": "Scotland",
+            "logo": "https://media-3.api-sports.io/football/leagues/179.png",
+            "flag": "https://media-1.api-sports.io/flags/gb.svg",
+            "season": 2022
+          },
+          "games": {
+            "appearences": 18,
+            "lineups": 6,
+            "minutes": 766,
+            "number": null,
+            "position": "Midfielder",
+            "rating": "6.776470",
+            "captain": false
+          },
+          "substitutes": {
+            "in": 12,
+            "out": 5,
+            "bench": 14
+          },
+          "shots": {
+            "total": 12,
+            "on": 9
+          },
+          "goals": {
+            "total": 4,
+            "conceded": 0,
+            "assists": 1,
+            "saves": null
+          },
+          "passes": {
+            "total": 335,
+            "key": 13,
+            "accuracy": 15
+          },
+          "tackles": {
+            "total": 14,
+            "blocks": 1,
+            "interceptions": 3
+          },
+          "duels": {
+            "total": 67,
+            "won": 23
+          },
+          "dribbles": {
+            "attempts": 7,
+            "success": 2,
+            "past": null
+          },
+          "fouls": {
+            "drawn": 6,
+            "committed": 16
+          },
+          "cards": {
+            "yellow": 2,
+            "yellowred": 0,
+            "red": 0
+          },
+          "penalty": {
+            "won": null,
+            "commited": null,
+            "scored": 0,
+            "missed": 0,
+            "saved": null
+          }
+        }
+      ]
+    }
+  ]
+}
