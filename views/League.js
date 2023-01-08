@@ -175,9 +175,9 @@ function LeagueMatches (props) {
 
 function LeagueScorers (props) {
     const [data, setData] = useState([]);
-
     const getData = () => {
-        const scorersData = require('../api/en/scorers.json');
+        const data = apiData[props.prop.route.params.code.toLowerCase()].scorers
+        const scorersData = data.find(item => item.parameters.league == props.prop.route.params.id)
         setData({
             scorers: scorersData.response.slice(0, 15)
         })
