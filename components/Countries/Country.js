@@ -18,7 +18,6 @@ import matchesData from "../../api/en/matches.json";
 // const navigation = createNativeStackNavigator();
 
 export const Country = (props) => {
-    console.log(props)
     const navigation = useNavigation();
 
     const [data, setData] = useState([]);
@@ -42,6 +41,8 @@ export const Country = (props) => {
                         onPress={() => navigation.navigate('League', {
                             code: props.code,
                             id: item.league.id,
+                            name: item.league.name,
+                            logo: item.league.logo,
                         })}
                         key={key}
                     >

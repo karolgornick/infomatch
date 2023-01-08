@@ -18,6 +18,9 @@ import { Table, Row } from 'react-native-table-component';
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
 import scorersData from "../api/en/scorers.json";
 const Tab = createMaterialTopTabNavigator();
+import {
+    LeagueHeader
+} from "../components/LeagueHeader";
 
 export const League = (props) => {
     return(
@@ -72,6 +75,11 @@ function LeagueMatches (props) {
                 padding: 20,
                 marginTop: 10,
             }}>
+                <LeagueHeader
+                    data={
+                        props.prop.route.params
+                    }
+                ></LeagueHeader>
                 <Pressable onPress={redirectToMatch}>
                     <View>
                         { data && data.matches &&
@@ -163,7 +171,7 @@ function LeagueMatches (props) {
     )
 }
 
-function LeagueScorers () {
+function LeagueScorers (props) {
     const [data, setData] = useState([]);
 
     const getData = () => {
@@ -182,6 +190,11 @@ function LeagueScorers () {
                 padding: 20,
                 marginTop: 10,
             }}>
+                <LeagueHeader
+                    data={
+                        props.prop.route.params
+                    }
+                ></LeagueHeader>
                 <View
                     style={{
                         borderBottomWidth: 1,
@@ -320,7 +333,7 @@ function LeagueMatch () {
     )
 }
 
-function LeagueTable (prop) {
+function LeagueTable (props) {
     const [data, setData] = useState([]);
 
     const getData = () => {
@@ -363,6 +376,11 @@ function LeagueTable (prop) {
                 marginTop: 10,
                 paddingBottom: 10,
             }}>
+                <LeagueHeader
+                    data={
+                        props.prop.route.params
+                    }
+                ></LeagueHeader>
                 {data && data.league &&
                     <Text
                         style={{
