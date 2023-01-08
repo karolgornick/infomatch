@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import moment from 'moment';
+import apiData from '../api/apiData'
 
 import { useNavigation } from '@react-navigation/native';
 // import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
@@ -43,14 +44,18 @@ export const League = (props) => {
 
 function LeagueMatches (props) {
     const navigation = useNavigation();
-    console.log(props.prop.navigation)
-
     const [data, setData] = useState([]);
 
     const getData = () => {
-        const matchesData = require('../api/en/matches.json');
+        const data = apiData[props.prop.route.params.code.toLowerCase()].matches
+        const matchesData = data.find(item => item.parameters.league == props.prop.route.params.id)
+        let shortData = matchesData.response
+        shortData = shortData.sort(function(a,b){
+            return new Date(b.fixture.date) - new Date(a.fixture.date);
+        })
+        const index = shortData.findIndex(item => new Date(item.fixture.date) < new Date())
         setData({
-            matches: matchesData.response.slice(0, 30)
+            matches: shortData.slice(index - 8, index + 50)
         })
     }
     useEffect(()=>{
@@ -99,7 +104,7 @@ function LeagueMatches (props) {
                                         >
                                             <Text>
                                                 {/*{new Date(data.fixture.date).toLocaleDateString("pl-PL")}*/}
-                                                {moment(new Date(data.fixture.date)).format('DD-MM-YYYY')}
+                                                {moment(new Date(data.fixture.date)).format('DD.MM.YYYY')}
                                             </Text>
                                             <Text style={{textAlign: "center"}}>
                                                 {/*{new Date(data.fixture.date).toLocaleTimeString("pl-PL", {*/}

@@ -18,6 +18,7 @@ import matchesData from "../../api/en/matches.json";
 // const navigation = createNativeStackNavigator();
 
 export const Country = (props) => {
+    console.log(props)
     const navigation = useNavigation();
 
     const [data, setData] = useState([]);
@@ -31,7 +32,6 @@ export const Country = (props) => {
     }
     useEffect(()=>{
         getData()
-
     },[])
 
     return (
@@ -40,7 +40,8 @@ export const Country = (props) => {
                 data.leagues.map((item, key) => (
                     <Pressable
                         onPress={() => navigation.navigate('League', {
-                            props
+                            code: props.code,
+                            id: item.league.id,
                         })}
                         key={key}
                     >
