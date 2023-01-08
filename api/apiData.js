@@ -4,6 +4,10 @@ const apiData = {
         matches: [
             require('./pl/ekstraklasa.json'),
             require('./pl/1liga.json')
+        ],
+        tables: [
+            require('./pl/ekstraklasaTable.json'),
+            require('./pl/1ligaTable.json')
         ]
     },
     de: {
@@ -11,6 +15,10 @@ const apiData = {
         matches: [
             require('./de/bundesliga.json'),
             require('./de/2bundesliga.json')
+        ],
+        tables: [
+            require('./de/bundesligaTable.json'),
+            require('./de/2bundesligaTable.json')
         ]
     },
     es: {
@@ -18,6 +26,10 @@ const apiData = {
         matches: [
             require('./es/laliga.json'),
             require('./es/segundadivision.json')
+        ],
+        tables: [
+            require('./es/laligaTable.json'),
+            require('./es/segundadivisionTable.json')
         ]
     },
     it: {
@@ -25,6 +37,10 @@ const apiData = {
         matches: [
             require('./it/seriea.json'),
             require('./it/serieb.json')
+        ],
+        tables: [
+            require('./it/serieaTable.json'),
+            require('./it/seriebTable.json')
         ]
     },
     gb: {
@@ -32,10 +48,12 @@ const apiData = {
         matches: [
             require('./gb/premierleague.json'),
             require('./gb/premiership.json')
+        ],
+        tables: [
+            require('./gb/premierleagueTable.json'),
+            require('./gb/premiershipTable.json')
         ]
-    },
-    matches: '',
-    users: require('./users.json'),
+    }
 };
 
 export default apiData;

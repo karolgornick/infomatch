@@ -8,6 +8,7 @@ import {
     ScrollView,
     SafeAreaView, Image,
 } from "react-native";
+import {Picker} from '@react-native-picker/picker';
 
 import moment from 'moment';
 import apiData from '../api/apiData'
@@ -248,6 +249,7 @@ function LeagueMatch () {
         }
     }
 
+
     const getData = () => {
         const scorersData = require('../api/en/match.json');
         setData({
@@ -335,6 +337,7 @@ function LeagueMatch () {
 
 function LeagueTable (props) {
     const [data, setData] = useState([]);
+    const [type, setType] = useState([]);
 
     const getData = () => {
         const leagueData = require('../api/en/table.json');
@@ -344,6 +347,7 @@ function LeagueTable (props) {
         })
     }
     useEffect(()=> {
+        setType('both')
         getData()
     },[])
 
@@ -365,6 +369,11 @@ function LeagueTable (props) {
                 fontSize: 11,
                 minWidth: 33
             }
+        },
+        picker: {
+            borderWidth: 1,
+            borderRadius: 4,
+            marginBottom: 20,
         }
     }
 
@@ -381,82 +390,29 @@ function LeagueTable (props) {
                         props.prop.route.params
                     }
                 ></LeagueHeader>
-                {data && data.league &&
-                    <Text
-                        style={{
-                            textAlign: "center",
-                            fontSize: 20,
-                            marginBottom: 10
-                        }}
-                    >
-                        {data.league.name}
-                    </Text>
-                }
                 <View
-                    style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        marginVertical: 10,
-                    }}
+                    style={
+                        style.picker
+                    }
                 >
-                    <View
-                        style={{
-                            width: '33%',
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "center"
-                        }}
-                    >
-                        <Pressable
-                            style={{
-                                borderWidth: 1,
-                                borderRadius: 3,
-                                paddingHorizontal: 10,
-                                paddingVertical: 2,
-                            }}
-                        >
-                            <Text>Wszystkie</Text>
-                        </Pressable>
-                    </View>
-                    <View
-                        style={{
-                            width: '33%',
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "center"
-                        }}
-                    >
-                        <Pressable
-                            style={{
-                                borderWidth: 1,
-                                borderRadius: 3,
-                                paddingHorizontal: 10,
-                                paddingVertical: 2,
-                            }}
-                        >
-                            <Text>Dom</Text>
-                        </Pressable>
-                    </View>
-
-                    <View
-                        style={{
-                            width: '33%',
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "center"
-                        }}
-                    >
-                        <Pressable
-                            style={{
-                                borderWidth: 1,
-                                borderRadius: 3,
-                                paddingHorizontal: 10,
-                                paddingVertical: 2,
-                            }}
-                        >
-                            <Text>Wyjazd</Text>
-                        </Pressable>
-                    </View>
+                    <Picker
+                        selectedValue={type}
+                        onValueChange={(itemValue, itemIndex) =>
+                            setType(itemValue)
+                        }>
+                        <Picker.Item
+                            label="Wszystkie"
+                            value="all"
+                        />
+                        <Picker.Item
+                            label="Dom"
+                            value="home"
+                        />
+                        <Picker.Item
+                            label="Wyjazd"
+                            value="out"
+                        />
+                    </Picker>
                 </View>
 
                 <View
