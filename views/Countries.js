@@ -1,16 +1,12 @@
 import React from "react";
 import {getCountries} from "../api/FootballAPI";
 import {
-    FlatList,
     StyleSheet,
     Text,
     View,
     ScrollView,
+    Pressable, Image,
 } from "react-native";
-import {
-    List
-} from "react-native-paper";
-import {SvgFromUri} from "react-native-svg";
 import {
     Country
 } from "../components/Countries/Country";
@@ -20,7 +16,8 @@ export class CountriesList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            countries: null
+            countries: null,
+            selected: []
         };
     }
 
@@ -36,6 +33,28 @@ export class CountriesList extends React.Component {
         })
     }
 
+    checkIfSelected (code) {
+        let selected = this.state.selected,
+            index = selected.indexOf(code)
+        if (index >= 0) {
+            return  true
+        }
+        return false
+    }
+
+    selectCode (code) {
+        let selected = this.state.selected,
+            index = selected.indexOf(code)
+        if (index < 0) {
+            selected.push(code)
+        } else {
+            selected.splice(index, 1)
+        }
+        this.setState({
+            selected
+        })
+    }
+
     render() {
         const styles = StyleSheet.create({
             container: {
@@ -46,11 +65,6 @@ export class CountriesList extends React.Component {
                 alignItems: "flex-start",
                 paddingHorizontal: 20,
                 paddingVertical: 10,
-                // flex: 1,
-                // paddingTop: 22,
-                // position: "relative",
-                // width: "100%",
-                // padding: "10px"
             },
             item: {
                 display: "flex",
@@ -58,26 +72,10 @@ export class CountriesList extends React.Component {
                 paddingVertical: 5,
                 borderBottomWidth: 1,
                 width: "100%"
-                // padding: 10,
-                // fontSize: 18,
-                // height: 44,
-                // borderBottomWidth: 1,
-                // width: '100%',
             },
             list: {
                 width: "100%",
-                // position: "absolute",
-                // left: 0,
-                // marginLeft: 0,
-                // margin: 0,
-                // padding: 0,
-                // width: '100%'
             },
-            flag: {
-                height: 30,
-                width: 30,
-                marginRight: 10
-            }
         });
 
 
@@ -92,28 +90,67 @@ export class CountriesList extends React.Component {
                     key="List"
                 >
                     {this.state.countries &&
-                        <List.Section
+                        <View
                             style={{
-                                width: '100%',
+                                width: '100%'
                             }}
-                            key="ListSection"
                         >
                             {this.state.countries.map((country) => {
                                 return (
-                                    <List.Accordion
+                                    <Pressable
                                         key={country.name}
                                         style={{
+                                            width: '100%',
+                                            paddingHorizontal: 20,
+                                            paddingVertical: 20,
                                             backgroundColor: 'white',
+                                            marginBottom: 10,
                                         }}
-                                        title={country.name}>
-                                        <Country
-                                            code={country.code}
-                                        />
-                                    </List.Accordion>
+                                        onPress={() => { this.selectCode(country.code) }}
+                                    >
+                                        <View
+                                            style={{
+                                                backgroundColor: 'white',
+                                                width: '100%',
+                                                display: 'flex',
+                                                flexDirection: "row",
+                                                justifyContent: "space-between"
+                                            }}
+                                        >
+                                            <Text>
+                                                {country.name}
+                                            </Text>
+                                            <Image
+                                                source={{
+                                                    uri: 'https://www.vippng.com/png/detail/31-311399_white-down-arrow-icon-png-icon-chevron-down.png'
+                                                }}
+                                                style={{
+                                                    width: 15,
+                                                    height: 15,
+                                                    backgroundColor: 'white',
+                                                    transform: [
+                                                        {
+                                                            rotate: (this.checkIfSelected(country.code)) ? '180deg' : '0deg'
+                                                        }
+                                                    ]
+                                                }}
+                                            />
+                                        </View>
+                                        { this.checkIfSelected(country.code) &&
+                                            <View
+                                                style={{
+                                                    backgroundColor: 'white',
+                                                }}
+                                                title={country.name}>
+                                                <Country
+                                                    code={country.code}
+                                                />
+                                            </View>
+                                        }
+                                    </Pressable>
                                 );
                             })}
-
-                        </List.Section>
+                        </View>
                     }
                 </View>
             </ScrollView>

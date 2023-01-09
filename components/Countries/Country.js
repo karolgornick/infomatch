@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import {
     View,
     Text,
-    Image, Pressable, Button
+    Image, Pressable, Button, AsyncStorage
 } from "react-native";
 import {
     getCountryLeague
@@ -21,62 +21,141 @@ export const Country = (props) => {
     const navigation = useNavigation();
 
     const [data, setData] = useState([]);
+    const [favs, setFavs] = useState([]);
 
     const getData = () => {
         const data = apiData[props.code.toLowerCase()];
         setData({
             leagues: data.leagues.response
         })
-
     }
     useEffect(()=>{
         getData()
+        checkFavourites()
     },[])
+
+    async function checkFavourites() {
+        let favs = await AsyncStorage.getItem(
+            '@Favs'
+        );
+        favs = JSON.parse(favs)
+        setFavs(favs)
+
+    }
+
+    async function setFavourites(item) {
+        let favs = await AsyncStorage.getItem(
+            '@Favs'
+        );
+
+        if (favs) {
+            favs = JSON.parse(favs)
+        }
+
+        if (!Array.isArray(favs)) {
+            favs = []
+        }
+
+        const index = favs.findIndex(x => x.id === item.id)
+        if (index < 0) {
+            favs.push(item)
+        } else {
+            favs.splice(index, 1)
+        }
+        await AsyncStorage.setItem(
+            '@Favs',
+            JSON.stringify(favs)
+        );
+        checkFavourites()
+    }
 
     return (
         <View>
             {data.leagues &&
                 data.leagues.map((item, key) => (
-                    <Pressable
-                        onPress={() => navigation.navigate('League', {
-                            code: props.code,
-                            id: item.league.id,
-                            name: item.league.name,
-                            logo: item.league.logo,
-                        })}
+                    <View
                         key={key}
                     >
                         <View
                             style={{
                                 display: "flex",
                                 flexDirection: "row",
-                                paddingHorizontal: 30,
+                                paddingHorizontal: 10,
                                 width: "100%",
                                 alignItems: "center",
                                 // paddingTop: (i === 0) ? 10 : 0,
-                                paddingTop: 10,
+                                marginTop: 20,
                                 paddingBottom: 10,
                             }}
                         >
-                            <Image
+                            <Pressable
+                                onPress={() => navigation.navigate('League', {
+                                    code: props.code,
+                                    id: item.league.id,
+                                    name: item.league.name,
+                                    logo: item.league.logo,
+                                })}
                                 style={{
-                                    width: 40,
-                                    height: 40,
-                                }}
-                                source={{
-                                    uri: item.league.logo
-                                }}
-                            />
-                            <Text
-                                style={{
-                                    marginLeft: 20,
-                                    fontSize: 14
+                                    width: '90%',
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    alignItems: "center"
                                 }}
                             >
-                                {item.league.name}
-                            </Text>
+                                <Image
+                                    style={{
+                                        width: 40,
+                                        height: 40,
+                                    }}
+                                    source={{
+                                        uri: item.league.logo
+                                    }}
+                                />
+                                <Text
+                                    style={{
+                                        marginLeft: 20,
+                                        fontSize: 14
+                                    }}
+                                >
+                                    {item.league.name}
+                                </Text>
+                            </Pressable>
+
+                            <Pressable
+                                onPress={() => {setFavourites(item.league)}}
+                                style={{
+                                    width: '10%',
+                                    display: 'flex',
+                                    flexDirection: "row",
+                                    justifyContent: "flex-end",
+                                    alignItems: "flex-end",
+                                }}
+                            >
+                                { favs.findIndex(x => x.id === item.league.id) < 0 &&
+                                    <Image
+                                        style={{
+                                            width: 20,
+                                            height: 20,
+                                        }}
+                                        source={{
+                                            uri: 'https://cdn-icons-png.flaticon.com/512/130/130188.png'
+                                        }}
+                                    />
+                                }
+                                { favs.findIndex(x => x.id === item.league.id) >= 0 &&
+                                    <Image
+                                        style={{
+                                            width: 20,
+                                            height: 20,
+                                        }}
+                                        source={{
+                                            uri: 'https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png'
+                                        }}
+                                    />
+                                }
+                            </Pressable>
                         </View>
-                    </Pressable>
+                    </View>
                 ))
             }
         </View>

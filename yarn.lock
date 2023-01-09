@@ -10900,6 +10900,13 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+"react-native-accordion@^1.0.1":
+  "integrity" "sha512-92t/XC3ohnD2GdKIzvv/AOFM0uwjJT/d4oCkVWZAjhWNg9fRzeKR0Clu1+ywo+DrFQqyYBcfihdE8luEOd0WPA=="
+  "resolved" "https://registry.npmjs.org/react-native-accordion/-/react-native-accordion-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "react-tween-state" "0.0.5"
+
 "react-native-codegen@^0.70.5":
   "integrity" "sha512-vXqgCWWIWlzsCtwD6hbmwmCleGNJYm+n4xO9VMfzzlF3xt9gjC7/USSMTf/YZlCK/hDwQU412QrNS6A9OH+mag=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.70.5.tgz"
@@ -11006,7 +11013,7 @@
   "resolved" "https://registry.npmjs.org/react-native-table-component/-/react-native-table-component-1.2.2.tgz"
   "version" "1.2.2"
 
-"react-native-vector-icons@*", "react-native-vector-icons@^9.2.0":
+"react-native-vector-icons@*":
   "integrity" "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA=="
   "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz"
   "version" "9.2.0"
@@ -11086,6 +11093,13 @@
     "react-is" "^18.1.0"
     "react-shallow-renderer" "^16.15.0"
     "scheduler" "^0.22.0"
+
+"react-tween-state@0.0.5":
+  "integrity" "sha512-pumJUMS1DxwDHsrpZFd0ZmZYstwqa4hw+GA8a/zGgTJLEg+s9EdyFVPO4tOSvUP6AKh9FDGo7Q44SpJI2l3ITQ=="
+  "resolved" "https://registry.npmjs.org/react-tween-state/-/react-tween-state-0.0.5.tgz"
+  "version" "0.0.5"
+  dependencies:
+    "tween-functions" "^1.0.1"
 
 "react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0", "react@^18.1.0", "react@>=16", "react@>=16.3.0", "react@>=17.0.0", "react@18.1.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
@@ -12977,6 +12991,11 @@
   "integrity" "sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg=="
   "resolved" "https://registry.npmjs.org/tunnel/-/tunnel-0.0.6.tgz"
   "version" "0.0.6"
+
+"tween-functions@^1.0.1":
+  "integrity" "sha512-PZBtLYcCLtEcjL14Fzb1gSxPBeL7nWvGhO5ZFPGqziCcr8uvHp0NDmdjBchp6KHL+tExcg0m3NISmKxhU394dA=="
+  "resolved" "https://registry.npmjs.org/tween-functions/-/tween-functions-1.2.0.tgz"
+  "version" "1.2.0"
 
 "type-check@^0.4.0":
   "integrity" "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew=="
