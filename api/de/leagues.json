@@ -15,7 +15,8 @@
         "id": 78,
         "name": "Bundesliga",
         "type": "League",
-        "logo": "https://media-4.api-sports.io/football/leagues/78.png"
+        "logo": "https://media-4.api-sports.io/football/leagues/78.png",
+        "country": "DE"
       }
     },
     {
@@ -23,7 +24,8 @@
         "id": 79,
         "name": "2. Bundesliga",
         "type": "League",
-        "logo": "https://media-5.api-sports.io/football/leagues/79.png"
+        "logo": "https://media-5.api-sports.io/football/leagues/79.png",
+        "country": "DE"
       }
     }
   ]

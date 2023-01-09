@@ -15,7 +15,8 @@
         "id": 135,
         "name": "Serie A",
         "type": "League",
-        "logo": "https://media-4.api-sports.io/football/leagues/135.png"
+        "logo": "https://media-4.api-sports.io/football/leagues/135.png",
+        "country": "IT"
       }
     },
     {
@@ -23,7 +24,8 @@
         "id": 136,
         "name": "Serie B",
         "type": "League",
-        "logo": "https://media-6.api-sports.io/football/leagues/136.png"
+        "logo": "https://media-6.api-sports.io/football/leagues/136.png",
+        "country": "IT"
       }
     }
   ]

@@ -15,7 +15,8 @@
         "id": 106,
         "name": "Ekstraklasa",
         "type": "League",
-        "logo": "https://media-5.api-sports.io/football/leagues/106.png"
+        "logo": "https://media-5.api-sports.io/football/leagues/106.png",
+        "country": "PL"
       }
     },
     {
@@ -23,7 +24,8 @@
         "id": 107,
         "name": "I Liga",
         "type": "League",
-        "logo": "https://media-6.api-sports.io/football/leagues/107.png"
+        "logo": "https://media-6.api-sports.io/football/leagues/107.png",
+        "country": "PL"
       }
     }
   ]

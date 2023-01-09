@@ -15,7 +15,8 @@
         "id": 39,
         "name": "Premier League",
         "type": "League",
-        "logo": "https://media-5.api-sports.io/football/leagues/39.png"
+        "logo": "https://media-5.api-sports.io/football/leagues/39.png",
+        "country": "GB"
       }
     },
     {
@@ -23,7 +24,8 @@
         "id": 179,
         "name": "Premiership",
         "type": "League",
-        "logo": "https://media-4.api-sports.io/football/leagues/179.png"
+        "logo": "https://media-4.api-sports.io/football/leagues/179.png",
+        "country": "GB"
       }
     }
   ]

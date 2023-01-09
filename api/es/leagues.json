@@ -15,7 +15,8 @@
         "id": 140,
         "name": "La Liga",
         "type": "League",
-        "logo": "https://media-5.api-sports.io/football/leagues/140.png"
+        "logo": "https://media-5.api-sports.io/football/leagues/140.png",
+        "country": "ES"
       }
     },
     {
@@ -23,7 +24,8 @@
         "id": 141,
         "name": "Segunda División",
         "type": "League",
-        "logo": "https://media-4.api-sports.io/football/leagues/141.png"
+        "logo": "https://media-4.api-sports.io/football/leagues/141.png",
+        "country": "ES"
       }
     }
   ]
