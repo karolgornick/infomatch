@@ -82,7 +82,9 @@ const DrawerContentComponent = (props) => {
                     }}
                 >
                     <Image
-                        source = {{uri:'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'}}
+                        source = {{
+                            uri: (data.user.avatar) ? data.user.avatar : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'
+                    }}
                         style = {{
                             width: 60,
                             height: 60,

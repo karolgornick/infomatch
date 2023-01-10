@@ -68,6 +68,7 @@ const Settings = () => {
                     fontSize: 16,
                     textAlign: "center",
                     fontWeight: "500",
+                    marginBottom: 20
                 }}
             >
                 { selectedLanguage === 'pl' &&
@@ -81,7 +82,6 @@ const Settings = () => {
                     </Text>
                 }
             </Text>
-            <Cameras></Cameras>
             { data && data.options &&
                 <View>
                     {selectedLanguage === 'pl' &&
@@ -94,44 +94,66 @@ const Settings = () => {
                             Language:
                         </Text>
                     }
-                    <Picker
-                        selectedValue={selectedLanguage}
-                        onValueChange={(itemValue, itemIndex) =>
-                            setLanguage(itemValue)
-                        }>
-                        <Picker.Item
-                            label={data.options.pl}
-                            value="pl"
-                        />
-                        <Picker.Item
-                            label={data.options.en}
-                            value="en"
-                        />
-                    </Picker>
-                    {selectedLanguage === 'pl' &&
-                        <Text>
-                            Główna zakładka:
-                        </Text>
-                    }
-                    {selectedLanguage === 'en' &&
-                        <Text>
-                            Main tab:
-                        </Text>
-                    }
-                    <Picker
-                        selectedValue={selectedTab}
-                        onValueChange={(itemValue, itemIndex) =>
-                            setTab(itemValue)
-                        }>
-                        <Picker.Item
-                            label={data.options.leagues}
-                            value="Leagues"
-                        />
-                        <Picker.Item
-                            label={data.options.matches}
-                            value="Matches"
-                        />
-                    </Picker>
+                    <View
+                        style={{
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            marginTop: 5,
+                            marginBottom: 10,
+                        }}
+                    >
+                        <Picker
+                            selectedValue={selectedLanguage}
+                            onValueChange={(itemValue, itemIndex) =>
+                                setLanguage(itemValue)
+                            }>
+                            <Picker.Item
+                                label={data.options.pl}
+                                value="pl"
+                            />
+                            <Picker.Item
+                                label={data.options.en}
+                                value="en"
+                            />
+                        </Picker>
+                    </View>
+                    {/*{selectedLanguage === 'pl' &&*/}
+                    {/*    <Text>*/}
+                    {/*        Główna zakładka:*/}
+                    {/*    </Text>*/}
+                    {/*}*/}
+                    {/*{selectedLanguage === 'en' &&*/}
+                    {/*    <Text>*/}
+                    {/*        Main tab:*/}
+                    {/*    </Text>*/}
+                    {/*}*/}
+                    {/*<View*/}
+                    {/*    style={{*/}
+                    {/*        borderWidth: 1,*/}
+                    {/*        borderRadius: 4,*/}
+                    {/*        marginTop: 5,*/}
+                    {/*    }}*/}
+                    {/*>*/}
+                    {/*    <Picker*/}
+                    {/*        selectedValue={selectedTab}*/}
+                    {/*        onValueChange={(itemValue, itemIndex) =>*/}
+                    {/*            setTab(itemValue)*/}
+                    {/*        }>*/}
+                    {/*        <Picker.Item*/}
+                    {/*            label={data.options.leagues}*/}
+                    {/*            value="Leagues"*/}
+                    {/*        />*/}
+                    {/*        <Picker.Item*/}
+                    {/*            label={data.options.matches}*/}
+                    {/*            value="Matches"*/}
+                    {/*        />*/}
+                    {/*    </Picker>*/}
+                    {/*</View>*/}
+                    <View style={{
+                        marginTop: 20
+                    }}>
+                        <Cameras></Cameras>
+                    </View>
                 </View>
             }
         </View>
