@@ -39,22 +39,26 @@ export const Country = (props) => {
             '@Favs'
         );
         favs = JSON.parse(favs)
+        if (!favs) {
+            favs = []
+        }
         setFavs(favs)
 
     }
 
     async function setFavourites(item) {
-        let favs = await AsyncStorage.getItem(
+        let favs = JSON.parse(await AsyncStorage.getItem(
             '@Favs'
-        );
+        ));
 
-        if (favs) {
-            favs = JSON.parse(favs)
-        }
+        console.log(`favs ${favs}`)
 
-        if (!Array.isArray(favs)) {
+        if (!favs) {
             favs = []
         }
+
+        console.log(favs)
+
 
         const index = favs.findIndex(x => x.id === item.id)
         if (index < 0) {
@@ -120,40 +124,43 @@ export const Country = (props) => {
                                     {item.league.name}
                                 </Text>
                             </Pressable>
-
-                            <Pressable
-                                onPress={() => {setFavourites(item.league)}}
-                                style={{
-                                    width: '10%',
-                                    display: 'flex',
-                                    flexDirection: "row",
-                                    justifyContent: "flex-end",
-                                    alignItems: "flex-end",
-                                }}
-                            >
-                                { favs.findIndex(x => x.id === item.league.id) < 0 &&
-                                    <Image
-                                        style={{
-                                            width: 20,
-                                            height: 20,
-                                        }}
-                                        source={{
-                                            uri: 'https://cdn-icons-png.flaticon.com/512/130/130188.png'
-                                        }}
-                                    />
-                                }
-                                { favs.findIndex(x => x.id === item.league.id) >= 0 &&
-                                    <Image
-                                        style={{
-                                            width: 20,
-                                            height: 20,
-                                        }}
-                                        source={{
-                                            uri: 'https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png'
-                                        }}
-                                    />
-                                }
-                            </Pressable>
+                            {favs &&
+                                <Pressable
+                                    onPress={() => {
+                                        setFavourites(item.league)
+                                    }}
+                                    style={{
+                                        width: '10%',
+                                        display: 'flex',
+                                        flexDirection: "row",
+                                        justifyContent: "flex-end",
+                                        alignItems: "flex-end",
+                                    }}
+                                >
+                                    {favs.findIndex(x => x.id === item.league.id) < 0 &&
+                                        <Image
+                                            style={{
+                                                width: 20,
+                                                height: 20,
+                                            }}
+                                            source={{
+                                                uri: 'https://cdn-icons-png.flaticon.com/512/130/130188.png'
+                                            }}
+                                        />
+                                    }
+                                    {favs.findIndex(x => x.id === item.league.id) >= 0 &&
+                                        <Image
+                                            style={{
+                                                width: 20,
+                                                height: 20,
+                                            }}
+                                            source={{
+                                                uri: 'https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png'
+                                            }}
+                                        />
+                                    }
+                                </Pressable>
+                            }
                         </View>
                     </View>
                 ))

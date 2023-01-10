@@ -59,11 +59,9 @@ export class Register extends React.Component {
     }
 
     async userExists (email) {
-        let users = await AsyncStorage.getItem('@Users')
+        let users = JSON.parse(await AsyncStorage.getItem('@Users'))
         if (!users) {
             users = []
-        } else {
-            users = JSON.parse(users)
         }
 
         const sameEmailUser = users.findIndex(item => item.email === email)
@@ -102,12 +100,13 @@ export class Register extends React.Component {
             password: this.state.password,
             avatar: null
         }
-        let users = await AsyncStorage.getItem('@Users')
+        let users = JSON.parse(await AsyncStorage.getItem('@Users'))
+
+
         if (!users) {
             users = []
-        } else {
-            users = JSON.parse(users)
         }
+
         users.push(user)
         await AsyncStorage.setItem('@Users', JSON.stringify(users))
 
@@ -115,6 +114,7 @@ export class Register extends React.Component {
             email: '',
             login: '',
             password: '',
+            repeatPassword: ''
         });
 
         this.setState({

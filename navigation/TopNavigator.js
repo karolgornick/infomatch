@@ -46,10 +46,12 @@ function FavouritesScreen() {
     },[isFocused])
 
     async function getFavourites() {
-        let favs = await AsyncStorage.getItem(
+        let favs = JSON.parse(await AsyncStorage.getItem(
             '@Favs'
-        );
-        favs = JSON.parse(favs)
+        ));
+        if (!favs) {
+            favs = []
+        }
         setFavs(favs)
     }
 

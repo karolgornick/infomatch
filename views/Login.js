@@ -56,42 +56,18 @@ export class Login extends React.Component {
     }
 
     async handleSubmit(event) {
-        console.log('ja')
         this.setState({
             sending: true
         });
-        const config = {
-            method: "GET",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Cache-Control": "max-age=0",
-                'Expires' : '0',
-                'If-Modified-Since': null
-            },
-        }
 
-        // console.log(`HOST: ${API_HOST}`)
-        //
-        // await fetch(`${API_HOST}/users`, config)
-        //     .then(res => {
-        //         return res.json();
-        //     })
-        //     .then(data => {
-        //         this.setUser(data)
-        //     })
-
-        let users = await AsyncStorage.getItem('@Users')
+        let users = JSON.parse(await AsyncStorage.getItem('@Users'))
         if (!users) {
             users = []
-        } else {
-            users = JSON.parse(users)
         }
 
         console.log(users)
 
         this.setUser(users)
-
         this.setState({
             sending: false
         });

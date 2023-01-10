@@ -2,10 +2,6 @@ import { Camera, CameraType } from 'expo-camera';
 import {useEffect, useState} from 'react';
 import {Button, Image, StyleSheet, Text, TouchableOpacity, View, AsyncStorage} from 'react-native';
 
-import {
-    API_HOST
-} from '@env'
-
 export default function App() {
     const [type, setType] = useState(CameraType.back);
     const [camera, setCamera] = useState(null);
@@ -37,29 +33,22 @@ export default function App() {
 
     async function addPhotoToUser(photo) {
         let user = await AsyncStorage.getItem('@User')
+        let users = await AsyncStorage.getItem('@Users')
         user = JSON.parse(user)
-        const config = {
-            method: "PUT",
-            body: JSON.stringify({
-                avatar: photo
-            }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-        }
+        users = JSON.parse(users)
 
-        console.log(API_HOST)
-
-        fetch(`${API_HOST}/users/${user.id}`, config)
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                console.log("AVATAR ZOSTAŁ DODANY:")
-                console.log(data)
-                setPhoto(null)
-            })
+        const index = users.findIndex(item => item.id === user.id)
+        console.log(photo)
+        users[index].avatar = null
+        setPhoto(null)
+        await AsyncStorage.setItem(
+            '@User',
+            JSON.stringify(users[index])
+        )
+        await AsyncStorage.setItem(
+            '@Users',
+                JSON.stringify(users)
+            )
     }
 
     return (
