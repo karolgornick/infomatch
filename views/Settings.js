@@ -152,7 +152,9 @@ const Settings = () => {
                     <View style={{
                         marginTop: 20
                     }}>
-                        <Cameras></Cameras>
+                        <Cameras
+                            lang={selectedLanguage}
+                        ></Cameras>
                     </View>
                 </View>
             }

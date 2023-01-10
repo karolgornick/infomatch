@@ -2,11 +2,16 @@ import { Camera, CameraType } from 'expo-camera';
 import {useEffect, useState} from 'react';
 import {Button, Image, StyleSheet, Text, TouchableOpacity, View, AsyncStorage, ScrollView} from 'react-native';
 
-export default function App() {
+export default function App(props) {
     const [enabled, setEnabled] = useState(false);
     const [type, setType] = useState(CameraType.back);
     const [camera, setCamera] = useState(null);
     const [photo, setPhoto] = useState(null);
+    const [lang, setLang] = useState({
+        avatar: "",
+        flip: "",
+        take: ""
+    });
     const styles = {
         camera: {
             height: 380,
@@ -29,6 +34,15 @@ export default function App() {
             textAlign: "center"
         }
     }
+
+    useEffect(() => {
+        setLang ({
+            avatar: (props.lang === 'pl') ? 'Dodaj avatar' : 'Add avatar',
+            flip: (props.lang === 'pl') ? 'Zmień kamerę' : 'Flip camera',
+            take: (props.lang === 'pl') ? 'Zrób zdjęcie' : 'Take picture',
+        })
+    }, [props])
+
 
     async function takePicture () {
         if (camera) {
@@ -80,7 +94,7 @@ export default function App() {
                     }}>
                         <TouchableOpacity style={styles.button} onPress={() => setEnabled(true)}>
                             <Text style={styles.text}>
-                                Get Avatar
+                                {lang.avatar}
                             </Text>
                         </TouchableOpacity>
                     </View>
@@ -91,10 +105,14 @@ export default function App() {
                         </Camera>
                         <View style={styles.buttonContainer}>
                             <TouchableOpacity style={styles.button} onPress={toggleCameraType}>
-                                <Text style={styles.text}>Flip Camera</Text>
+                                <Text style={styles.text}>
+                                    {lang.flip}
+                                </Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.button} onPress={takePicture}>
-                                <Text style={styles.text}>Take Picture</Text>
+                                <Text style={styles.text}>
+                                    {lang.take}
+                                </Text>
                             </TouchableOpacity>
                         </View>
                     </View>
