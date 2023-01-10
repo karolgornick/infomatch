@@ -39,7 +39,7 @@ export class Login extends React.Component {
     }
 
     async setUser(data) {
-        const user = data.find(item => item.login === this.state.login)
+        const user = data.find(item => item.email === this.state.login)
         if (user && user.password === this.state.password) {
             await AsyncStorage.setItem(
                 '@User',
@@ -56,6 +56,7 @@ export class Login extends React.Component {
     }
 
     async handleSubmit(event) {
+        console.log('ja')
         this.setState({
             sending: true
         });
@@ -70,15 +71,26 @@ export class Login extends React.Component {
             },
         }
 
-        console.log(`HOST: ${API_HOST}`)
+        // console.log(`HOST: ${API_HOST}`)
+        //
+        // await fetch(`${API_HOST}/users`, config)
+        //     .then(res => {
+        //         return res.json();
+        //     })
+        //     .then(data => {
+        //         this.setUser(data)
+        //     })
 
-        await fetch(`${API_HOST}/users`, config)
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                this.setUser(data)
-            })
+        let users = await AsyncStorage.getItem('@Users')
+        if (!users) {
+            users = []
+        } else {
+            users = JSON.parse(users)
+        }
+
+        console.log(users)
+
+        this.setUser(users)
 
         this.setState({
             sending: false
