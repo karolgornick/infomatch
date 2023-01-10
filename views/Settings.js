@@ -4,6 +4,7 @@ import {
     Text, AsyncStorage,
 } from "react-native";
 import {Picker} from '@react-native-picker/picker';
+import Cameras from "../components/Cameras";
 
 const Settings = () => {
     const [selectedLanguage, setSelectedLanguage] = useState();
@@ -80,6 +81,7 @@ const Settings = () => {
                     </Text>
                 }
             </Text>
+            <Cameras></Cameras>
             { data && data.options &&
                 <View>
                     {selectedLanguage === 'pl' &&

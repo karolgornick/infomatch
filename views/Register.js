@@ -4,7 +4,7 @@ import {
     Text,
     TextInput,
     Pressable,
-    ActivityIndicator
+    ActivityIndicator, AsyncStorage
 } from "react-native";
 import {
     API_HOST
@@ -59,22 +59,15 @@ export class Register extends React.Component {
     }
 
     async userExists (email) {
-        const config = {
-            method: "GET",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Cache-Control": "max-age=0",
-                'Expires' : '0',
-                'If-Modified-Since': null
-            },
+        let users = await AsyncStorage.getItem('@Users')
+        if (!users) {
+            users = []
+        } else {
+            users = JSON.parse(users)
         }
 
-        const response = await fetch(`${API_HOST}/users`, config),
-            data = await response.json(),
-            sameEmailUser = data.find(item => item.email === email)
-
-        return (sameEmailUser) ? "Uzytkownik z tym emailem istnieje" : ""
+        const sameEmailUser = users.findIndex(item => item.email === email)
+        return (sameEmailUser >= 0) ? "Uzytkownik z tym emailem istnieje" : ""
     }
 
     async handleSubmit(event) {
@@ -102,31 +95,31 @@ export class Register extends React.Component {
         this.setState({
             sending: true
         });
-        const config = {
-            method: "POST",
-            body: JSON.stringify({
-                email: this.state.email,
-                login: this.state.login,
-                password: this.state.password
-            }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+
+        const user = {
+            email: this.state.email,
+            login: this.state.login,
+            password: this.state.password,
+            avatar: null
         }
+        let users = await AsyncStorage.getItem('@Users')
+        if (!users) {
+            users = []
+        } else {
+            users = JSON.parse(users)
+        }
+        users.push(user)
+        await AsyncStorage.setItem('@Users', JSON.stringify(users))
 
-        fetch(`${API_HOST}/users`, config)
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                console.log("KONTO ZOSTAŁO UTWORZONE:")
-                console.log(data)
-                this.setState({
-                    sending: false
-                });
-            })
+        this.setState({
+            email: '',
+            login: '',
+            password: '',
+        });
 
+        this.setState({
+            sending: false
+        });
         event.preventDefault();
     }
 

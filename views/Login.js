@@ -70,17 +70,19 @@ export class Login extends React.Component {
             },
         }
 
+        console.log(`HOST: ${API_HOST}`)
+
         await fetch(`${API_HOST}/users`, config)
             .then(res => {
-                this.setState({
-                    sending: false
-                });
                 return res.json();
             })
             .then(data => {
                 this.setUser(data)
             })
 
+        this.setState({
+            sending: false
+        });
         event.preventDefault();
     }
 

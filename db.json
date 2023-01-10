@@ -1,12 +1,5 @@
 {
-  "users": [
-    {
-      "email": "gornicki.norbert@gmail.com",
-      "login": "Gnorb",
-      "password": "Haslo1234!",
-      "id": 20
-    }
-  ],
+  "users": [],
   "profile": {
     "name": "typicode"
   }

@@ -36,6 +36,7 @@ const DrawerContentComponent = (props) => {
             );
         }
         const user = await AsyncStorage.getItem('@User');
+
         setData({
             user: JSON.parse(user),
             screens: {
