@@ -174,22 +174,22 @@ const DrawerNavigator = () => {
             <Drawer.Screen
                 name="Login"
                 component={Login}
-                options={{ headerTitle: data.screens.login }}
+                options={{ headerTitle: (data && data.screens) ? data.screens.login : '' }}
             />
             <Drawer.Screen
                 name="Register"
                 component={Register}
-                options={{ headerTitle: data.screens.register }}
+                options={{ headerTitle: (data && data.screens) ? data.screens.register : '' }}
             />
             <Drawer.Screen
                 name="Profile"
                 component={Profile}
-                options={{ headerTitle: data.screens.profile }}
+                options={{ headerTitle: (data && data.screens) ? data.screens.profile: '' }}
             />
             <Drawer.Screen
                 name="Ustawienia"
                 component={Settings}
-                options={{ headerTitle: data.screens.settings }}
+                options={{ headerTitle: (data && data.screens) ? data.screens.settings: '' }}
             />
         </Drawer.Navigator>
     );
