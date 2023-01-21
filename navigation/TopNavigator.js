@@ -121,8 +121,7 @@ function LeaguesScreen() {
 }
 
 
-function LeaguesNavigator(props) {
-
+function LeaguesNavigator() {
     return (
         <Stack.Navigator>
             <Stack.Screen
@@ -139,8 +138,7 @@ function LeaguesNavigator(props) {
     );
 }
 
-function FavouritesNavigator(props) {
-
+function FavouritesNavigator() {
     return (
         <Stack.Navigator>
             <Stack.Screen

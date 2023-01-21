@@ -19,6 +19,7 @@ import { useDrawerStatus } from '@react-navigation/drawer';
 import {
     LeagueMatch
 } from "../views/League";
+import Profile from "../views/Profille";
 
 
 const Drawer = createDrawerNavigator();
@@ -44,6 +45,7 @@ const DrawerContentComponent = (props) => {
                 logout: (lang === 'pl') ? 'Wyloguj się' : 'Log out',
                 settings: (lang === 'pl') ? 'Ustawienia' : 'Settings',
                 register: (lang === 'pl') ? 'Zarejestruj się' : 'Register',
+                profile: (lang === 'pl') ? 'Profil' : 'Profile',
             }
         })
     }
@@ -101,6 +103,10 @@ const DrawerContentComponent = (props) => {
             {data && data.user && data.screens &&
                 <View>
                     <DrawerItem
+                        label={data.screens.profile}
+                        onPress={() => props.navigation.navigate("Profile")}
+                    />
+                    <DrawerItem
                         label={data.screens.settings}
                         onPress={() => props.navigation.navigate("Ustawienia")}
                     />
@@ -127,6 +133,34 @@ const DrawerContentComponent = (props) => {
 }
 
 const DrawerNavigator = () => {
+
+    const [data, setData] = useState([]);
+
+    const getData = async () => {
+        const lang = await AsyncStorage.getItem('@Language');
+        if (!lang) {
+            await AsyncStorage.setItem(
+                '@Language',
+                'pl'
+            );
+        }
+        const user = await AsyncStorage.getItem('@User');
+
+        setData({
+            user: JSON.parse(user),
+            screens: {
+                login: (lang === 'pl') ? 'Zaloguj się' : 'Log in',
+                settings: (lang === 'pl') ? 'Ustawienia' : 'Settings',
+                register: (lang === 'pl') ? 'Zarejestruj się' : 'Register',
+                profile: (lang === 'pl') ? 'Profil' : 'Profile',
+            }
+        })
+    }
+
+    useEffect(()=>{
+        getData()
+    },[])
+
     return (
         <Drawer.Navigator
             initialRouteName="Dashboard"
@@ -140,14 +174,23 @@ const DrawerNavigator = () => {
             <Drawer.Screen
                 name="Login"
                 component={Login}
-                options={{ headerTitle: 'Zaloguj się' }}
+                options={{ headerTitle: data.screens.login }}
             />
             <Drawer.Screen
                 name="Register"
                 component={Register}
-                options={{ headerTitle: 'Zarejestruj się' }}
+                options={{ headerTitle: data.screens.register }}
             />
-            <Drawer.Screen name="Ustawienia" component={Settings} />
+            <Drawer.Screen
+                name="Profile"
+                component={Profile}
+                options={{ headerTitle: data.screens.profile }}
+            />
+            <Drawer.Screen
+                name="Ustawienia"
+                component={Settings}
+                options={{ headerTitle: data.screens.settings }}
+            />
         </Drawer.Navigator>
     );
 }

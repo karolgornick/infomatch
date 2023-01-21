@@ -9,11 +9,6 @@ import {
 } from "react-native";
 
 import styles from './styles/LoginAndRegister'
-
-import {
-    API_HOST
-} from '@env'
-
 import FingerPrintScanner from "../components/FingerPrintScanner";
 
 
@@ -64,8 +59,6 @@ export class Login extends React.Component {
         if (!users) {
             users = []
         }
-
-        console.log(users)
 
         this.setUser(users)
         this.setState({
