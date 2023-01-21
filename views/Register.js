@@ -6,11 +6,9 @@ import {
     Pressable,
     ActivityIndicator, AsyncStorage
 } from "react-native";
-import {
-    API_HOST
-} from '@env'
 import { useNavigation } from '@react-navigation/native';
 import styles from './styles/LoginAndRegister'
+import moment from "moment";
 
 
 
@@ -98,7 +96,9 @@ export class Register extends React.Component {
             email: this.state.email,
             login: this.state.login,
             password: this.state.password,
-            avatar: null
+            avatar: null,
+            creationDate: `${moment(new Date()).format('DD.MM.YYYY')} ${moment(new Date()).format('HH:mm')}`,
+            favourites: []
         }
         let users = JSON.parse(await AsyncStorage.getItem('@Users'))
 

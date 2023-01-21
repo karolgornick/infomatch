@@ -6,8 +6,7 @@ export default  {
         marginTop: 10,
     },
     label: {
-        width: 50,
-        textAlign: "right",
+        width: 80,
         paddingRight: 10,
     },
     input: {
@@ -36,5 +35,8 @@ export default  {
     footerText: {
         marginTop: 20,
         textAlign: "center",
+    },
+    error: {
+        color: "red"
     }
 }

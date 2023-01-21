@@ -51,13 +51,9 @@ export const Country = (props) => {
             '@Favs'
         ));
 
-        console.log(`favs ${favs}`)
-
         if (!favs) {
             favs = []
         }
-
-        console.log(favs)
 
 
         const index = favs.findIndex(x => x.id === item.id)
