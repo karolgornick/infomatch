@@ -51,7 +51,9 @@ export default function App(props) {
 
 
     async function takePicture () {
+        console.log('xaxa')
         if (camera) {
+            console.log('xaxa2')
             let photoData = await camera.takePictureAsync({
                 base64: true,
             });
