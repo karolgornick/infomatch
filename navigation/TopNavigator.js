@@ -14,23 +14,7 @@ import {useIsFocused, useNavigation} from "@react-navigation/native";
 const Tab = createMaterialTopTabNavigator();
 const Stack = createNativeStackNavigator();
 
-import {Country} from "../components/Countries/Country";
-
-
-
-LogBox.ignoreLogs(['Warning: Async Storage has been extracted from react-native core']);
-
-function MatchesScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Matches Screen</Text>
-            <Button
-                title="Go to Details"
-                onPress={() => navigation.navigate('Leagues')}
-            />
-        </View>
-    );
-}
+import MatchesScreen from "../views/MatchesScreen";
 
 function FavouritesScreen() {
     const navigation = useNavigation();
