@@ -117,38 +117,6 @@ const Settings = () => {
                             />
                         </Picker>
                     </View>
-                    {/*{selectedLanguage === 'pl' &&*/}
-                    {/*    <Text>*/}
-                    {/*        Główna zakładka:*/}
-                    {/*    </Text>*/}
-                    {/*}*/}
-                    {/*{selectedLanguage === 'en' &&*/}
-                    {/*    <Text>*/}
-                    {/*        Main tab:*/}
-                    {/*    </Text>*/}
-                    {/*}*/}
-                    {/*<View*/}
-                    {/*    style={{*/}
-                    {/*        borderWidth: 1,*/}
-                    {/*        borderRadius: 4,*/}
-                    {/*        marginTop: 5,*/}
-                    {/*    }}*/}
-                    {/*>*/}
-                    {/*    <Picker*/}
-                    {/*        selectedValue={selectedTab}*/}
-                    {/*        onValueChange={(itemValue, itemIndex) =>*/}
-                    {/*            setTab(itemValue)*/}
-                    {/*        }>*/}
-                    {/*        <Picker.Item*/}
-                    {/*            label={data.options.leagues}*/}
-                    {/*            value="Leagues"*/}
-                    {/*        />*/}
-                    {/*        <Picker.Item*/}
-                    {/*            label={data.options.matches}*/}
-                    {/*            value="Matches"*/}
-                    {/*        />*/}
-                    {/*    </Picker>*/}
-                    {/*</View>*/}
                     <View style={{
                         marginTop: 20
                     }}>

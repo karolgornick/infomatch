@@ -1,8 +1,10 @@
 import { Camera, CameraType } from 'expo-camera';
 import {useEffect, useState} from 'react';
 import {Button, Image, StyleSheet, Text, TouchableOpacity, View, AsyncStorage, ScrollView} from 'react-native';
+import {useIsFocused} from "@react-navigation/native";
 
 export default function App(props) {
+    const isFocused = useIsFocused();
     const [enabled, setEnabled] = useState(false);
     const [type, setType] = useState(CameraType.back);
     const [camera, setCamera] = useState(null);
@@ -34,6 +36,10 @@ export default function App(props) {
             textAlign: "center"
         }
     }
+
+    useEffect(() => {
+        setEnabled(false)
+    }, [isFocused])
 
     useEffect(() => {
         setLang ({

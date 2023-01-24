@@ -65,9 +65,6 @@ function MatchesScreen({ navigation }) {
             const index = shortData.findIndex(item => new Date(item.fixture.date) < new Date())
             country.matches = shortData.slice(index - 4, index)
             countries.push(country)
-            for (let z in country.matches) {
-                console.log(country.matches[z].teams.home)
-            }
         }
         setData(countries)
 
