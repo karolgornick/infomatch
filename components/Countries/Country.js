@@ -2,20 +2,13 @@ import React,{useState,useEffect} from 'react';
 import {
     View,
     Text,
-    Image, Pressable, Button, AsyncStorage
+    Image,
+    Pressable,
+    AsyncStorage
 } from "react-native";
-import {
-    getCountryLeague
-} from "../../api/FootballAPI";
 
 import { useNavigation } from '@react-navigation/native';
 import apiData from '../../api/apiData.js'
-import matchesData from "../../api/en/matches.json";
-// const navigation = useNavigation();
-
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//
-// const navigation = createNativeStackNavigator();
 
 export const Country = (props) => {
     const navigation = useNavigation();
@@ -38,7 +31,16 @@ export const Country = (props) => {
         let favs = await AsyncStorage.getItem(
             '@Favs'
         );
-        favs = JSON.parse(favs)
+        let user = JSON.parse(await AsyncStorage.getItem(
+            '@User'
+        ));
+        let users = JSON.parse(await AsyncStorage.getItem(
+            '@Users'
+        ));
+
+        console.log(users)
+
+        favs = (user && user.favourites) ? user.favourites : JSON.parse(favs)
         if (!favs) {
             favs = []
         }
@@ -50,22 +52,54 @@ export const Country = (props) => {
         let favs = JSON.parse(await AsyncStorage.getItem(
             '@Favs'
         ));
+        let user = JSON.parse(await AsyncStorage.getItem(
+            '@User'
+        ));
 
-        if (!favs) {
-            favs = []
-        }
 
+        if (user) {
+            const index = user.favourites.findIndex(x => x.id === item.id)
+            if (index < 0) {
+                user.favourites.push(item)
+            } else {
+                user.favourites.splice(index, 1)
+            }
 
-        const index = favs.findIndex(x => x.id === item.id)
-        if (index < 0) {
-            favs.push(item)
+            let users = JSON.parse(await AsyncStorage.getItem(
+                '@Users'
+            ));
+            const indexUser = users.findIndex(item => item.email === user.email)
+            if (indexUser >= 0) {
+                users[indexUser] = user
+                await AsyncStorage.setItem(
+                    '@User',
+                    JSON.stringify(user)
+                );
+                await AsyncStorage.setItem(
+                    '@UserCurrent',
+                    JSON.stringify(user)
+                );
+                await AsyncStorage.setItem(
+                    '@Users',
+                    JSON.stringify(users)
+                );
+            }
         } else {
-            favs.splice(index, 1)
+            if (!favs) {
+                favs = []
+            }
+            const index = favs.findIndex(x => x.id === item.id)
+            if (index < 0) {
+                favs.push(item)
+            } else {
+                favs.splice(index, 1)
+            }
+
+            await AsyncStorage.setItem(
+                '@Favs',
+                JSON.stringify(favs)
+            );
         }
-        await AsyncStorage.setItem(
-            '@Favs',
-            JSON.stringify(favs)
-        );
         checkFavourites()
     }
 
