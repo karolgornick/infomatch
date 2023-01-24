@@ -17,7 +17,8 @@ export class CountriesList extends React.Component {
         super(props);
         this.state = {
             countries: null,
-            selected: []
+            selected: [],
+            language: null
         };
     }
 

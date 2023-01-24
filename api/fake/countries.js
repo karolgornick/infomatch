@@ -10,38 +10,33 @@ export default {
         {
             "code": "PL",
             "flag": "https://media.api-sports.io/flags/pl.svg",
-            "name": "Poland"
+            "name": "Poland",
+            "namePL": "Polska"
         },
         {
             "code": "DE",
             "flag": "https://media.api-sports.io/flags/de.svg",
-            "name": "Germany"
+            "name": "Germany",
+            "namePL": "Niemcy"
         },
         {
             "code": "ES",
             "flag": "https://media.api-sports.io/flags/es.svg",
-            "name": "Spain"
+            "name": "Spain",
+            "namePL": "Hiszpania"
         },
         {
             "code": "IT",
             "flag": "https://media.api-sports.io/flags/it.svg",
-            "name": "Italy"
+            "name": "Italy",
+            "namePL": "Włochy"
         },
-        // {
-        //     "code": "HR",
-        //     "flag": "https://media.api-sports.io/flags/hr.svg",
-        //     "name": "Croatia"
-        // },
         {
             "code": "GB",
             "flag": "https://media.api-sports.io/flags/gb.svg",
-            "name": "England"
+            "name": "England",
+            "namePL": "Anglia"
         },
-        // {
-        //     "code": "FR",
-        //     "flag": "https://media.api-sports.io/flags/fr.svg",
-        //     "name": "France"
-        // },
     ],
     "results": 7
 }
