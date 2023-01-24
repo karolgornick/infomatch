@@ -3,8 +3,10 @@ import {
     View, Text, Pressable, ActivityIndicator, TextInput, AsyncStorage, Image, ScrollView
 } from "react-native";
 import styles from './styles/LoginAndRegister'
+import {useIsFocused} from "@react-navigation/native";
 
 const Profile = () => {
+    const isFocused = useIsFocused();
     const [passwordError, setPasswordError] = useState('')
     const [passwordChange, setPasswordChange] = useState(false)
     const [currentPassword, setCurrentPassword] = useState('')
@@ -22,8 +24,14 @@ const Profile = () => {
         cancel: ''
     });
 
+    useEffect(() => {
+        getLanguageFromState()
+        getData()
+    }, [isFocused])
+
     async function getLanguageFromState() {
         const lang = await AsyncStorage.getItem('@Language')
+        console.log(lang)
         setLanguage(lang)
         setLanguageVariables({
             password: (language === 'pl') ? 'Hasło' : 'Password',
