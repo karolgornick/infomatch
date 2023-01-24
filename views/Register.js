@@ -11,7 +11,7 @@ import styles from './styles/LoginAndRegister'
 import moment from "moment";
 
 
-
+// rejestracja
 export class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -48,14 +48,17 @@ export class Register extends React.Component {
         this.setState({password});
     }
 
+    // sprawdza czy format mail poprawny
     emailValidation (mail) {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)
     }
 
+    // sprawdza czy format hasla poprawny 1 duza litera, co nahmniej 8 znaków, jedna cyfra i jeden znak specjalny
     passwordValidation (password) {
         return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^&*/()_={}\[\]\\|;:+"'<,>.?-])[A-Za-z\d~`!@#$%^&*/()_={}\[\]\\|;:+"'<,>.?-]{8,}$/.test(password)
     }
 
+    // waliduje czy nie ma usera o takim mailu
     async userExists (email) {
         let users = JSON.parse(await AsyncStorage.getItem('@Users'))
         if (!users) {
@@ -66,6 +69,7 @@ export class Register extends React.Component {
         return (sameEmailUser >= 0) ? "Uzytkownik z tym emailem istnieje" : ""
     }
 
+    // wysłany formularz
     async handleSubmit(event) {
         let errorPasswords = (this.state.password === this.state.repeatPassword) ? '' : 'Hasła nie są takie same'
         errorPasswords = (this.passwordValidation(this.state.password)) ? errorPasswords : 'Hasło powinno mieć co najmniej 8 znaków, jedną dużą literę i jeden znak specjalny'
@@ -75,8 +79,10 @@ export class Register extends React.Component {
             errorPasswords
         })
 
+        // jesli format mail poprawny
         if (this.state.errorEmail.length === 0) {
             const userExist = await this.userExists(this.state.email)
+            // jesli email istnieje, wyswietla error
             if (userExist) {
                 this.setState({
                     errorEmail: userExist
@@ -84,6 +90,7 @@ export class Register extends React.Component {
             }
         }
 
+        // jesli jest jakikolwiek blad z mailem, loginem, haslem zatrzymuje funkcje
         if (this.state.errorEmail.length > 0 || this.state.errorLogin.length > 0 || this.state.errorPasswords.length > 0) {
             return
         }
@@ -92,6 +99,7 @@ export class Register extends React.Component {
             sending: true
         });
 
+        // tworzy obiekt usera no podstawie danych z formularza
         const user = {
             email: this.state.email,
             login: this.state.login,
@@ -100,16 +108,21 @@ export class Register extends React.Component {
             creationDate: `${moment(new Date()).format('DD.MM.YYYY')} ${moment(new Date()).format('HH:mm')}`,
             favourites: []
         }
+
+        //pobieranie aktuyalnej listy userów
         let users = JSON.parse(await AsyncStorage.getItem('@Users'))
 
 
+        // sprawdzanie czy nie jest nullem, jesli tak to tworzy tablice
         if (!users) {
             users = []
         }
 
+        // dodaje usera do listy userów i zapisuje w pamieci
         users.push(user)
         await AsyncStorage.setItem('@Users', JSON.stringify(users))
 
+        // czysci formularz
         this.setState({
             email: '',
             login: '',

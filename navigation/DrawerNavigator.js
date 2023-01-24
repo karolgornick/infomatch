@@ -24,7 +24,7 @@ import Profile from "../views/Profille";
 
 const Drawer = createDrawerNavigator();
 
-
+// Drawer nawigator
 const DrawerContentComponent = (props) => {
     const [data, setData] = useState([]);
 
@@ -50,11 +50,13 @@ const DrawerContentComponent = (props) => {
         })
     }
 
+    // sprawdzanie czy drawer jest otartwy
     const isDrawerOpen = useDrawerStatus() === 'open';
     if (isDrawerOpen === true) {
         getData()
     }
 
+    // wylogowanie usera
     const logout = () => {
         logoutUser()
     }

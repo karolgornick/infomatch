@@ -11,7 +11,7 @@ import {
     Country
 } from "../components/Countries/Country";
 
-
+// lista krajów z dropdownami na zakładce LIGI
 export class CountriesList extends React.Component {
     constructor(props) {
         super(props);
@@ -22,6 +22,7 @@ export class CountriesList extends React.Component {
         };
     }
 
+    // pobieranie krajów z jsona
     async componentDidMount() {
         const fetchCountries = async () => {
             return await getCountries()
@@ -34,6 +35,7 @@ export class CountriesList extends React.Component {
         })
     }
 
+    // sprawdzanie czy dropdown kraju jest rozwiniety
     checkIfSelected (code) {
         let selected = this.state.selected,
             index = selected.indexOf(code)
@@ -43,6 +45,7 @@ export class CountriesList extends React.Component {
         return false
     }
 
+    // rozwijanie dropdowna kraju
     selectCode (code) {
         let selected = this.state.selected,
             index = selected.indexOf(code)

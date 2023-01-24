@@ -16,27 +16,25 @@ const Stack = createNativeStackNavigator();
 
 import MatchesScreen from "../views/MatchesScreen";
 
+// ulubione
 function FavouritesScreen() {
     const navigation = useNavigation();
     const [favs, setFavs] = useState([]);
 
+    // pobieranie ulubionych przy otworzeniu widoku
     useEffect(() => {
         getFavourites()
     }, [])
 
     const isFocused = useIsFocused();
+    // pobieranie ulubionych przy otworzeniu widoku
     useEffect(()=>{
         getFavourites()
     },[isFocused])
 
+
+    // pobieranie ulubionych
     async function getFavourites() {
-        // let favs = JSON.parse(await AsyncStorage.getItem(
-        //     '@Favs'
-        // ));
-        // if (!favs) {
-        //     favs = []
-        // }
-        // setFavs(favs)
         let favs = await AsyncStorage.getItem(
             '@Favs'
         );
@@ -44,6 +42,7 @@ function FavouritesScreen() {
             '@User'
         ));
 
+        // sprawdzanie czy user jest zalogowany, jeśli tak to ulubieni z usera, jeśli nie to ulubieni z niezalogowanego usera
         favs = (user && user.favourites) ? user.favourites : JSON.parse(favs)
         if (!favs) {
             favs = []
@@ -108,6 +107,7 @@ function FavouritesScreen() {
     );
 }
 
+// lista krajów z ligami
 function LeaguesScreen() {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -116,7 +116,7 @@ function LeaguesScreen() {
     );
 }
 
-
+// nawigator lig, wyświetla listę krajów lub konkretną ligę (mecze, tabela, strzelcy)
 function LeaguesNavigator() {
     return (
         <Stack.Navigator>
@@ -134,6 +134,7 @@ function LeaguesNavigator() {
     );
 }
 
+// nawigator ulubionych, wyświetla listę lig lub konkretną ligę (mecze, tabela, strzelcy)
 function FavouritesNavigator() {
     return (
         <Stack.Navigator>
@@ -151,20 +152,17 @@ function FavouritesNavigator() {
     );
 }
 
+// główny nawigator (ligi, mecze, ulubione)
 const TopNavigator = () => {
     let mainTab;
 
     const getMainTab = async () => {
-        // const [tab, setTab] = useState([])
         mainTab = await AsyncStorage.getItem(
             '@MainTab'
         );
         if (!mainTab) {
             mainTab === 'Leagues'
         }
-        // setTab(mainTab)
-        // console.log(tab)
-        console.log(mainTab)
     }
 
     getMainTab()

@@ -24,14 +24,14 @@ const Profile = () => {
         cancel: ''
     });
 
+    // sprawdzanie języka przy otworzeniu widoku
     useEffect(() => {
         getLanguageFromState()
-        getData()
     }, [isFocused])
 
+    // ustawianie zmiennych językowych
     async function getLanguageFromState() {
         const lang = await AsyncStorage.getItem('@Language')
-        console.log(lang)
         setLanguage(lang)
         setLanguageVariables({
             password: (language === 'pl') ? 'Hasło' : 'Password',
@@ -43,20 +43,12 @@ const Profile = () => {
             cancel: (language === 'pl') ? 'Anuluj' : 'Cancel',
             errors: {
                 wrong: (language === 'pl') ? 'Hasło się nie zgadza' : 'Password is wrong',
-                notSame: (language === 'pl') ? 'Hała nie są takie same' : 'Passwords are not same',
+                notSame: (language === 'pl') ? 'Hasła nie są takie same' : 'Passwords are not same',
             }
         })
     }
 
-    // useEffect(() => {
-    //     setLanguageVariables({
-    //         changePassword: (language === 'pl') ? 'Zmień hasło' : 'Change password',
-    //         sendPassword: (language === 'pl') ? 'Wyślij' : 'Send',
-    //         repeatPassword: (language === 'pl') ? 'Powtórz hasło' : 'Repeat password',
-    //         creationDate: (language === 'pl') ? 'Data utworzenia' : 'Creation date'
-    //     })
-    // }, language)
-
+    // czyszczenie zmiennych formularza
     function passwordChangeState() {
         setPasswordChange(!passwordChange)
         setCurrentPassword('')
@@ -65,18 +57,22 @@ const Profile = () => {
         setPasswordError('')
     }
 
+    // ustawianie zmiennej obecnego hasła
     function handleCurrentPassword(value) {
         setCurrentPassword(value)
     }
 
+    // ustawianie zmiennej nowego hasła
     function handleNewPassword(value) {
         setNewPassword(value)
     }
 
+    // ustawianie zmiennej powtórzenia nowego hasla
     function handleNewPasswordRepeat(value) {
         setNewPasswordRepeat(value)
     }
 
+    // sprawdzanie, walidacja i zapisywanie nowego hasła
     async function saveNewPassword() {
         let users = JSON.parse(await AsyncStorage.getItem('@Users')),
             index = users.findIndex(item => item.email === user.email)
@@ -92,6 +88,7 @@ const Profile = () => {
         }
     }
 
+    // pobieranie danych usera do widoku
     async function getData() {
         const user = await AsyncStorage.getItem('@User');
         setUser(JSON.parse(user))

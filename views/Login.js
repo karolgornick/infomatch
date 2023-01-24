@@ -11,7 +11,7 @@ import {
 import styles from './styles/LoginAndRegister'
 import FingerPrintScanner from "../components/FingerPrintScanner";
 
-
+// widok logowania
 export class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -25,14 +25,17 @@ export class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // zapisywanie zmiennej z emailem po zmianie inputa
     handleLoginChange(login) {
         this.setState({login});
     }
 
+    // zapisywanie zmiennej z haslem po zmianie inputa
     handlePasswordChange(password) {
         this.setState({password});
     }
 
+    // spprawdzanie czy user istnieje na liscie zarejestrowanych userow w pamieci telefonu i jesli tak to logowanie usera
     async setUser(data) {
         const user = data.find(item => item.email === this.state.login)
         if (user && user.password === this.state.password) {
@@ -50,6 +53,7 @@ export class Login extends React.Component {
         }
     }
 
+    // wysylka formularza i rozpoczecie walidacji danych
     async handleSubmit(event) {
         this.setState({
             sending: true

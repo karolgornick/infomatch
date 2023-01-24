@@ -10,23 +10,29 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import apiData from '../../api/apiData.js'
 
+// liga wyświetlana na liście lig po kliknięciu w kraj na zakładce LIGI
 export const Country = (props) => {
     const navigation = useNavigation();
 
     const [data, setData] = useState([]);
     const [favs, setFavs] = useState([]);
 
+    // ustawianie danych z jsona
     const getData = () => {
         const data = apiData[props.code.toLowerCase()];
         setData({
             leagues: data.leagues.response
         })
     }
+
+    // pobieranie danych i sprawdzanie ulubionych
     useEffect(()=>{
         getData()
         checkFavourites()
     },[])
 
+
+    // pobieranie tablicy ulyubionych lig z usera jeśli jest zalogowany, a jeśli nie to z @Favs
     async function checkFavourites() {
         let favs = await AsyncStorage.getItem(
             '@Favs'
@@ -43,6 +49,7 @@ export const Country = (props) => {
 
     }
 
+    // zapisywanie tablicy ulyubionych lig do usera jeśli jest zalogowany, a jeśli nie to do @Favs
     async function setFavourites(item) {
         let favs = JSON.parse(await AsyncStorage.getItem(
             '@Favs'

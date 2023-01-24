@@ -1,6 +1,6 @@
 import { Camera, CameraType } from 'expo-camera';
 import {useEffect, useState} from 'react';
-import {Button, Image, StyleSheet, Text, TouchableOpacity, View, AsyncStorage, ScrollView} from 'react-native';
+import {Text, TouchableOpacity, View, AsyncStorage, ScrollView} from 'react-native';
 import {useIsFocused} from "@react-navigation/native";
 
 export default function App(props) {
@@ -36,11 +36,12 @@ export default function App(props) {
             textAlign: "center"
         }
     }
-
+    // wyłączanie kamery przy zmianie widoku
     useEffect(() => {
         setEnabled(false)
     }, [isFocused])
 
+    // pobieranie zmiennych językowych
     useEffect(() => {
         setLang ({
             avatar: (props.lang === 'pl') ? 'Dodaj avatar' : 'Add avatar',
@@ -50,10 +51,9 @@ export default function App(props) {
     }, [props])
 
 
+    // pobieranie zdjęcia z kamery
     async function takePicture () {
-        console.log('xaxa')
         if (camera) {
-            console.log('xaxa2')
             let photoData = await camera.takePictureAsync({
                 base64: true,
             });
@@ -61,16 +61,19 @@ export default function App(props) {
         }
     }
 
+    // zmiana przód/tył
     function toggleCameraType() {
         setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
     }
 
+    // dodanie zdjęcia do usera jeśli się wykona
     useEffect(() => {
         if (photo && photo.length > 100) {
             addPhotoToUser(photo)
         }
     }, [photo])
 
+    // funkcja dodawania zdj
     async function addPhotoToUser(photo) {
         let user = await AsyncStorage.getItem('@User')
         let users = await AsyncStorage.getItem('@Users')
@@ -80,10 +83,13 @@ export default function App(props) {
         users[index].avatar = photo
         setPhoto(null)
         setEnabled(false)
+
+        //przypisywanie zdjęcia do zalogowanego usera
         await AsyncStorage.setItem(
             '@User',
             JSON.stringify(users[index])
         )
+        //przypisywanie zdjęcia do zalogowanego usera z listy userów w pamięci telefonu
         await AsyncStorage.setItem(
             '@Users',
                 JSON.stringify(users)

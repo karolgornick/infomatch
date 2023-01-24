@@ -8,6 +8,7 @@ import apiData from '../api/apiData'
 import {useIsFocused} from "@react-navigation/native";
 import moment from "moment";
 
+// widok meczy z zakładki MECZE
 function MatchesScreen({ navigation }) {
     const [data, setData] = useState(null)
     const [language, setLanguage] = useState(null)

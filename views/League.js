@@ -18,19 +18,24 @@ import {
     LeagueHeader
 } from "../components/LeagueHeader";
 
+// nawigator ligi po wejściu w konkretną ligę (MECZE,TABELA,STRZELCY)
 export const League = (props) => {
     const [data, setData] = useState([]);
     const [lang, setLang] = useState([]);
     const isFocused = useIsFocused();
 
+    // funkcja pobierania języka
     async function getLang() {
         const language = await AsyncStorage.getItem('@Language');
         setLang(language)
     }
 
+    // pobieranie języka po wejsciu w widok
     useEffect(()=>{
         getLang()
     },[isFocused])
+
+    // ustawianie zmiennych jezykowych przy zmianie jezyka
     useEffect(() => {
         setData({
             options: {
@@ -68,10 +73,12 @@ export const League = (props) => {
     )
 }
 
+// lista meczy w widoku ligi
 function LeagueMatches (props) {
     const [data, setData] = useState([]);
     const [match, setMatch] = useState(null);
 
+    // pobieranie danych z pliku
     const getData = () => {
         const data = apiData[props.prop.route.params.code.toLowerCase()].matches
         const matchesData = data.find(item => item.parameters.league == props.prop.route.params.id)
@@ -88,12 +95,15 @@ function LeagueMatches (props) {
         getData()
     },[])
 
+
+    // zamykanie szczegolowych danych meczu i usuwanie listeneru cofniecia
     function removeMatch() {
         setMatch(null)
         BackHandler.removeEventListener("hardwareBackPress", removeMatch, true)
         return true;
     }
 
+    // otwieranie szczegolowych danych meczu z listenerem cofnięcia
     function redirectToMatch(item) {
         if (item.fixture.periods.first) {
             setMatch(item)
@@ -213,6 +223,7 @@ function LeagueMatches (props) {
     )
 }
 
+// lista strzelców ligi
 function LeagueScorers (props) {
     const [data, setData] = useState([]);
     const getData = () => {
@@ -281,6 +292,7 @@ function LeagueScorers (props) {
     )
 }
 
+// widok szczegółowych danych meczu między dwoma przeciwnikami
 function LeagueMatch (props) {
     const [data, setData] = useState(null);
     const [lang, setLang] = useState('pl');
@@ -529,6 +541,7 @@ function LeagueMatch (props) {
     )
 }
 
+// tabela ligi
 function LeagueTable (props) {
     const [data, setData] = useState([]);
     const [type, setType] = useState([]);
@@ -541,6 +554,8 @@ function LeagueTable (props) {
             standings: tablesData.response[0].league.standings[0]
         })
     }
+
+    /// zmiana typu dom wyjazd wszystkie
     useEffect(()=> {
         setType('all')
         getData()

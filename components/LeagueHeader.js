@@ -1,6 +1,7 @@
 import {Image, Text, View} from "react-native";
 import React from "react";
 
+// nagłówek ligi
 function LeagueHeader (props) {
     return (
         <View

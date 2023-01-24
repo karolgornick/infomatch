@@ -6,11 +6,12 @@ import {
 import {Picker} from '@react-native-picker/picker';
 import Cameras from "../components/Cameras";
 
+// widok ustawien
 const Settings = () => {
     const [selectedLanguage, setSelectedLanguage] = useState();
-    const [selectedTab, setSelectedTab] = useState();
     const [data, setData] = useState([]);
 
+    // sprawdzanie jezyka
     const setLanguage = async (itemValue) => {
         await AsyncStorage.setItem(
             '@Language',
@@ -31,13 +32,6 @@ const Settings = () => {
         })
     }
 
-    const setTab = async (itemValue) => {
-        await AsyncStorage.setItem(
-            '@MainTab',
-            itemValue
-        );
-        setSelectedTab(itemValue)
-    }
 
     const setLanguageFromState = async () => {
         const lang = await AsyncStorage.getItem('@Language')
@@ -45,14 +39,9 @@ const Settings = () => {
         setLanguageVariables(lang)
     }
 
-    const setTabFromState = async () => {
-        const tab = await AsyncStorage.getItem('@MainTab')
-        setTab(tab)
-    }
 
     useEffect(() =>{
         setLanguageFromState()
-        setTabFromState()
     },[])
 
     return (
