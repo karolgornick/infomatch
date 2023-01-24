@@ -95,8 +95,10 @@ function LeagueMatches (props) {
     }
 
     function redirectToMatch(item) {
-        setMatch(item)
-        BackHandler.addEventListener('hardwareBackPress', removeMatch);
+        if (item.fixture.periods.first) {
+            setMatch(item)
+            BackHandler.addEventListener('hardwareBackPress', removeMatch);
+        }
     }
     return (
         <SafeAreaView>

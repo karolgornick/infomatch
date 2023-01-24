@@ -34,11 +34,6 @@ export const Country = (props) => {
         let user = JSON.parse(await AsyncStorage.getItem(
             '@User'
         ));
-        let users = JSON.parse(await AsyncStorage.getItem(
-            '@Users'
-        ));
-
-        console.log(users)
 
         favs = (user && user.favourites) ? user.favourites : JSON.parse(favs)
         if (!favs) {

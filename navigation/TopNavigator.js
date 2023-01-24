@@ -30,9 +30,21 @@ function FavouritesScreen() {
     },[isFocused])
 
     async function getFavourites() {
-        let favs = JSON.parse(await AsyncStorage.getItem(
+        // let favs = JSON.parse(await AsyncStorage.getItem(
+        //     '@Favs'
+        // ));
+        // if (!favs) {
+        //     favs = []
+        // }
+        // setFavs(favs)
+        let favs = await AsyncStorage.getItem(
             '@Favs'
+        );
+        let user = JSON.parse(await AsyncStorage.getItem(
+            '@User'
         ));
+
+        favs = (user && user.favourites) ? user.favourites : JSON.parse(favs)
         if (!favs) {
             favs = []
         }
