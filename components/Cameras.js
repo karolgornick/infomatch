@@ -4,6 +4,8 @@ import {Text, TouchableOpacity, View, AsyncStorage, ScrollView} from 'react-nati
 import {useIsFocused} from "@react-navigation/native";
 
 export default function App(props) {
+    const [hasPermission, setHasPermission] = useState(null);
+
     const isFocused = useIsFocused();
     const [enabled, setEnabled] = useState(false);
     const [type, setType] = useState(CameraType.back);
@@ -65,6 +67,14 @@ export default function App(props) {
     function toggleCameraType() {
         setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
     }
+
+    useEffect(() => {
+        (async () => {
+            const { status } = await Camera.requestPermissionsAsync();
+            setHasPermission(status === "granted");
+            console.log(status)
+        })();
+    }, []);
 
     // dodanie zdjęcia do usera jeśli się wykona
     useEffect(() => {
